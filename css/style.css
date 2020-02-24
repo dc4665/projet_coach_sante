@@ -1,0 +1,503 @@
+h1 , h2 , h3
+{
+    font-family: "anton";
+}
+
+h3
+{
+    font-size: 1.73rem;
+}
+
+p
+{
+    font-family: "roboto";
+    font-size: 1.2rem;
+}
+
+
+/* BACKGROUND COLOR */
+.bg_yel_oni
+{
+    background-color: #ffbf34;
+}
+
+.bg_white
+{
+    background-color: #ffffff;
+}
+
+/* Police & Couleur Police */
+.anton
+{
+    font-family: "anton";
+}
+
+.black
+{
+    color: #000000;
+}
+
+.white
+{
+    color: #ffffff;
+}
+
+.medium_font
+{
+    font-size: 2rem;
+}
+
+.big_font
+{
+    font-size: 4rem;
+}
+
+.form_font
+{
+    font-size: 1.8rem;
+}
+
+.uppercase
+{
+    text-transform: uppercase;
+}
+
+.italique
+{
+    font-style: italic;
+}
+
+/* BUTTONS*/
+
+.btn:hover
+{
+    color: #ffffff;
+}
+
+.button_big  /* Buttons utilisés dans le Bandeau Accueil */
+{
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+
+.button_responsive
+{
+    font-size: 1.5rem;
+    width: 50%;
+}
+
+
+.button a:hover , button:hover a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#coach a:hover 
+{
+    color: #ffbf34;
+}
+
+.button_map
+{
+    width: 40%;
+    color: #ffbf34;
+}
+
+.button_map:hover
+{
+    color: #000000;
+}
+
+.btn_nos_coach a:hover , .btn_nos_coach:hover a
+{
+    color: #ffbf34;
+}
+
+/* FONT ICON GENERAL */
+
+.fas
+{
+    font-size: 2rem;
+}
+
+/* BACKGROUND IMAGE DES PAGES*/
+
+#bg_img /* BACKGROUND IMAGE PAGE ACCUEIL*/
+{
+    background-image:url(../img/duo_training_web.jpg);
+    background-size: cover;
+    background-position: center;   
+}
+
+@media screen and (max-width: 767px)
+{
+    #bg_img
+    {
+        background-image:url(../img/coach-training-responsive-mobile.jpg);
+        background-size: cover;
+        background-position: center;   
+    }
+}
+
+#bg_contact
+{
+    position: absolute;
+    background-image:url(../img/contact_resize.jpg);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#bg_transformation
+{
+    position: absolute;
+    background-image:url(../img/training_woman_web.jpg);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#bg_coachs
+{
+    position: absolute;
+    background-image:url(../img/coach_resize_1.jpg);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#bg_programme
+{
+    position: absolute;
+    background-image:url(../img/talkin_resize_1.jpg);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 1440px)
+{
+    #bg_programme
+    {
+        background-position: 75%;
+    }
+}
+
+.bg_axe_couleur
+{
+/*    position: absolute;*/
+    background-image: url(../img/bg_axe_couleur.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 118px;
+    width: 100%;
+}
+
+.bg_bande_couleur
+{
+    background-image: url(../img/bg_bande_verti_couleur.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    margin-top: 118px;
+    width: 100%;
+}
+
+.bg_opacity
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #00000055;
+}
+
+.bandeau_index
+{
+    position: relative;
+    margin-top: 119px;
+}
+
+.bandeau
+{
+    position: relative;
+    height: 583px;
+    margin-top: 119px;
+}
+
+
+/* Navigation */
+nav a
+{
+    font-family: "anton";
+    font-size: 1.5rem;
+}
+
+nav .fas
+{
+    font-size: 2rem;
+}
+
+nav a
+{
+    color: #000000;
+}
+
+nav a:hover
+{
+    color: #ffffff;
+}
+
+/* Programme */
+#programme .card
+{
+    border: none;
+}
+
+/* Coach */
+#coach button:hover
+{
+    color: #ffbf34;
+}
+
+#programme h2
+{
+    font-size: 1.73rem;
+}
+
+
+/* Page Transformation */
+.thumbnail
+{
+    max-height: 377px;
+}
+
+.thumbnail:hover 
+{
+    box-shadow: 3px 3px 3px 3px #888888;
+}
+
+.temoignage
+{
+    border: dashed #2c2c2c2c 3px;
+    padding: 2rem;
+}
+
+
+
+
+/* Page Nos Coachs*/
+.coach_pic
+{
+    width: 75%;
+    height: auto;
+}
+
+.coach_portrait.card
+{
+    border: none;
+    background-color: #ffffff;
+}
+
+.coach_portrait.card .fab:hover
+{
+    color: #ffbf34;
+}
+
+.coach_portrait_2.card
+{
+    border: none;
+    background-color: #ffbf34;
+}
+
+.coach_portrait_2.card .fab:hover
+{
+    color: #ffffff;
+}
+
+
+.coach_portrait_2.card .btn:hover
+{
+    color: #ffbf34;
+}
+
+
+/* Plan du Site*/
+#plan_site li
+{
+    list-style: none;
+    font-family: "anton";
+    margin-top: 1rem;
+    margin-bottom: 2rem;  
+    font-size: 5vh;
+}
+
+#plan_site a
+{
+    color: #000000;
+}
+
+#plan_site a:hover
+{
+    text-decoration-line: none;
+    color: #ffbf34;
+}
+
+/* FOOTER */
+footer
+{
+    background-color: #2c2c2c;
+}
+
+footer h5
+{
+    text-decoration: underline;
+}
+
+footer li
+{
+    font-family: "anton";
+    list-style: none;
+    margin: 1rem 0;
+    color: #ffffff;
+}
+
+footer a
+{
+    color: #ffffff;
+}
+
+footer a:link
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover
+{
+    color: #ffbf34;
+    text-decoration: none;
+}
+
+footer .fab
+{
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+footer .fab:hover
+{
+    color: #ffbf34;
+    text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width:768px)
+{
+    #bg_coachs
+    {
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 360px)
+{
+    .responsive_font
+    {
+        font-size: 3vh;
+    }
+    
+    .responsive_font_btn
+    {
+        font-size: 2.8vh;
+    }
+ 
+}
+
+@media screen and (max-width:380px)
+{
+    .button_map
+    {
+        width: 50%;
+    }
+}
+
+/* Principalement utilisé pour la page Transformations*/
+@media screen and (max-width: 576px)
+{  
+    h1.big_font.responsive_title 
+    {
+        font-size: 11vw;
+    }
+}
+
+/* MEDIA QUERIES pour NAVBAR */
+@media screen and (max-width: 900px)
+{
+    .fixed-top
+    {
+        position: static;
+        z-index: 0;
+    }
+    
+    .bandeau
+    {
+        margin-top: 0;
+    }
+    
+    .bandeau_index
+    {
+        margin-top: 0;
+    }
+    
+    .bg_axe_couleur
+    {
+        margin-top: 0;
+    }
+    
+    .bg_bande_couleur
+    {
+        margin-top: 0;
+    }
+}
+
+/* MEDIA QUERIES pour PAGE: Transformation*/
+@media screen and (max-width: 768px)
+{
+    #bg_transformation
+    {
+        background-position: 62%;
+    }
+}
+
+/* MEDIA QUERIES pour PAGE: Nos Coachs*/
+@media screen and (min-width: 500px) AND (max-width: 767px)
+{
+    .coach_pic
+    {
+        width: 50%;
+    }
+}
+
+/* MEDIA QUERIES pour PAGE: plan_du_sute & mentions_légales */
+@media screen and (max-width: 992px)
+{
+    .bg_axe_couleur
+    {
+        background-image: url(../img/bg_bande_verti_couleur.jpg);
+        background-repeat: repeat-y;
+    }
+}
+
+
+
