@@ -1,57 +1,47 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coach Sante - Politique de Confidentialité</title>
-    <meta name="description" content="Coaching Personnel, musculation, fitness et perte de poids. Nous sommes une petite équipe de coachs passionnés proche de nos clients.">
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="fontawesome/css/all.css" rel="stylesheet" />
-     <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous">
-    </script>
-    <script src="js/bootstrap.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Anton%7CRoboto&display=swap" rel="stylesheet"> 
-</head>
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-02-24 21:03:52
+  from 'C:\xampp\htdocs\projet_coach_sante\template\politiques_confidentialites.tpl' */
 
-<body>
-      <header class="bg_yel_oni fixed-top shadow">
-        
-        <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.html"><img src="img/logo/logo_coach.png" width="150" alt="logo"/></a>
-                <button class="navbar-toggler text-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                </button>
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e542c28da65d1_58286333',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '5ae46365b7421fdc9c9f0a70d9a3fba9c45b9bba' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\projet_coach_sante\\template\\politiques_confidentialites.tpl',
+      1 => 1582573089,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5e542c28da65d1_58286333 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_loadInheritance();
+$_smarty_tpl->inheritance->init($_smarty_tpl, true);
+?>
 
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link mr-3" href="index.html">ACCUEIL</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mr-3" href="programme.html">PROGRAMMES</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mr-3" href="coachs.html">NOS COACHS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mr-3" href="transformations.html">TRANSFORMATIONS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mr-3" href="contact.html">CONTACT</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
 
-    </header>
-    
-    
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12606590605e542c28da5b80_25776822', "content");
+$_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
+}
+/* {block "content"} */
+class Block_12606590605e542c28da5b80_25776822 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'content' => 
+  array (
+    0 => 'Block_12606590605e542c28da5b80_25776822',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
     <!-- Partie Bannière -->
     <div class="bg_axe_couleur">
            
@@ -139,59 +129,9 @@
         </section>
     </div>
 
-    
-    <!-- FOOTER -->
-    
-    <footer>
-        <div class="container">
-            
-            <div class="row py-3">
-                
-                <div class="col-12 col-md-1">
-                    <a href="index.html"><img src="img/logo/logo_coach_clair.png" width="150"  alt="logo blanc"></a>
-                </div>
-                
-                <div class="offset-md-1 col-6 col-md-6">
-                    <ul>
-                        <li><h5>Liens Rapides</h5></li>
-                        <li><a href="programme.html">Programmes</a></li>
-                        <li><a href="coachs.html">Nos Coachs</a></li>
-                        <li><a href="transformations.html">Transformations</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="plan_du_site.html">Plan du site</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-6 col-md-4">
-                                   
-                    <h5 class="white anton mt-3">Réseaux Sociaux</h5>
-                                        
-                    <div class="row">
-                        <div class="col">
-                            <a href="#"><i class="fab fa-twitter-square"></i></a>
-                        </div>
-                        
-                        <div class="col">
-                            <a href="#"><i class="fab fa-facebook-square"></i></a>
-                        </div>
-                        
-                        <div class="col">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="white">Coach Sante 2019 - <a href="mentions_legales.html">Mentions légales</a>  |  <a href="politiques_confidentialites.html">Politique de confidentialité</a></p>
-                </div>
-            </div>
-            
-        </div>
-    </footer>
-    
-</body>
-    
-</html>
+
+<?php
+}
+}
+/* {/block "content"} */
+}

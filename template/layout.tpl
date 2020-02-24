@@ -22,6 +22,10 @@ Googlefont
     </script>
     <script src="../js/bootstrap.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Anton%7CRoboto&display=swap" rel="stylesheet"> 
+
+    <!-- Fichier pour Lightbox -->
+    <link href="css/lightbox.css" rel="stylesheet">
+    <script src="js/lightbox-plus-jquery.js"></script>
 </head>
 
 <body>
@@ -30,6 +34,10 @@ Googlefont
     {block name="content"}Contenu{/block}
 
     {block name="footer"}{include file="./footer.tpl"}{/block}
+
+
+{* Fichier pour faire fonctionner la Lightbox *}
+<script src="js/lightbox.js"></script>
 
 </body>
 </html>

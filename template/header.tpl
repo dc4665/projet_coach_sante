@@ -2,7 +2,7 @@
         
         <div class="container">
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.html"><img src="img/logo/logo_coach.png" width="150" alt="logo"/></a>
+                <a class="navbar-brand" href="{$link->getPage('index')}"><img src="img/logo/logo_coach.png" width="150" alt="logo"/></a>
                 <button class="navbar-toggler text-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                 </button>

@@ -31,11 +31,11 @@
                     
                     <div class="row">
                         <div class="col-12 col-lg-6 p-2">
-                            <a href="contact.html" class="btn button_big bg_yel_oni black anton responsive_font_btn">COMMENCER</a>
+                            <a href="{$link->getPage('contact')}" class="btn button_big bg_yel_oni black anton responsive_font_btn">COMMENCER</a>
                         </div>
 
                         <div class="col-12 col-lg-6 p-2">
-                            <a href="programme.html" class="btn button_big bg_yel_oni black anton responsive_font_btn">EN SAVOIR PLUS</a>
+                            <a href="{$link->getPage('programme')}" class="btn button_big bg_yel_oni black anton responsive_font_btn">EN SAVOIR PLUS</a>
                         </div>
                              
                     </div>
@@ -119,7 +119,7 @@
                         
                         <img src="img/pourquoi_circle.jpg" class="rounded-circle d-md-none" style="width:auto; height:250px;" alt="coach et cliente"/>
                         
-                        <a href="coachs.html" class="btn button_big bg_white btn_nos_coach type=button mt-5 anton">CONNAITRE NOS COACHS</a>
+                        <a href="{$link->getPage('coachs')}" class="btn button_big bg_white btn_nos_coach type=button mt-5 anton">CONNAITRE NOS COACHS</a>
                     </div>
                     
                     <div class="d-none d-md-block col-md-5 p-4">
@@ -146,13 +146,13 @@
                     <p class="mt-4">
                         Nous avons déjà aidé plus d'une cinquantaine de personnes à accomplir leurs transformations physiques. Chacune de ces transformations a demandé un travail de longue haleine, mais les efforts et la sueur paient toujours! Et si vous étiez le ou la prochaine à rejoindre notre panthéon?         
                     </p>                     
-                     <a href="transformations.html" class="d-none d-md-block btn button_big bg_yel_oni black anton mt-3">VOIR LES TRANSFORMATIONS</a>
+                     <a href="{$link->getPage('transformations')}" class="d-none d-md-block btn button_big bg_yel_oni black anton mt-3">VOIR LES TRANSFORMATIONS</a>
                 </div>       
             </div> 
             
             <div class="row order-3 d-md-none mt-5">
                 <div class="col-12">
-                    <a href="transformations.html" class="btn button_big bg_yel_oni black anton">VOIR LES TRANSFORMATIONS</a>
+                    <a href="{$link->getPage('transformations')}" class="btn button_big bg_yel_oni black anton">VOIR LES TRANSFORMATIONS</a>
                 </div>
             </div>
         </div>

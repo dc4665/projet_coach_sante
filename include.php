@@ -18,4 +18,4 @@ require('class/Link.php');
 //Instantacion d'un objet de la classe Link et sa déclaration globale
 $link = new Link();
 
-$smarty->assign( 'link', $link);
+$smarty->assign('link', $link);
