@@ -1,6 +1,10 @@
 <?php
 /* CONTROLLER EN PHASE DE PROTOTYPE POUR TESTER L'AFFICHAGE */
 
+//echo($_POST['email']);
+//echo($_POST['password']);
+$email = $_POST['email'];
+$password = $_POST['password'];
 
 $fiches = new Fiche_suivi();
 

@@ -3,9 +3,12 @@
 //Ce fichier sera notre routeur
 include_once('include.php');
 
+//Récupération de l'id_fiche
+$id_fiche = $_GET['id_fiche'];
+
 //Brouillon Test pour vérifier que ma fonction getFiche() fonctionne. 
 $fiche = new Fiche_suivi();
-$fiche = $fiche->getFiche(2);
+$fiche = $fiche->getFiche($id_fiche);
 //var_dump($fiche);
 
 //Création et assignation des variables smarty
