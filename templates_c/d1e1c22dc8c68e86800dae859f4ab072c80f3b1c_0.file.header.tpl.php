@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-26 14:00:23
+/* Smarty version 3.1.34-dev-7, created on 2020-02-26 21:44:57
   from 'C:\xampp\htdocs\projet_coach_sante\template\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e566be7d740b4_68591857',
+  'unifunc' => 'content_5e56d8c98bb045_01586875',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd1e1c22dc8c68e86800dae859f4ab072c80f3b1c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projet_coach_sante\\template\\header.tpl',
-      1 => 1582616066,
+      1 => 1582572266,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e566be7d740b4_68591857 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e56d8c98bb045_01586875 (Smarty_Internal_Template $_smarty_tpl) {
 ?><header class="bg_yel_oni fixed-top shadow">
         
         <div class="container">

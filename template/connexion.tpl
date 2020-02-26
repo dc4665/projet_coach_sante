@@ -6,7 +6,7 @@
 
     <div class="container">
         <h2>Connexion</h2>
-        <form action="{$link->getPage('client')}" method="post">
+        <form action="{$link->getPage('personne')}" method="post">
             <label>Email</label>
             <input type="email" name="email" id="email" required><br/>
             <label>Mot de passe</label>

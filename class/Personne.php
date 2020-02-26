@@ -9,6 +9,7 @@ class Personne {
     private $_tel;
     private $_email;
     private $_password;
+    private $_id_role;
 
 
     //Méthode __construct qui va s'excecuter à l'instantacion de l'objet
@@ -59,6 +60,10 @@ class Personne {
         return $this->_password;
     }
 
+    public function getId_role(){
+        return $this->_id_role;
+    }
+
     //setters
     public function setId_personne($id_personne){
         $this->_id_personne = $id_personne; 
@@ -84,6 +89,10 @@ class Personne {
         $this->_password = $password;
     }
 
+    public function setId_role($id_role){
+        $this->_id_role = $id_role;
+    }
+
 
     //Fonctions supplémentaires
 
@@ -98,7 +107,7 @@ class Personne {
     }
 
     //Fonction pour récupérer les informations d'un client après authentification
-    public function getClientInfos($email){
+    public function getPersonneInfos($email){
         
         
         $client = $GLOBALS['bdd']->query('SELECT * FROM personne WHERE email = "'.$email.'"');
