@@ -12,8 +12,11 @@ class Personne {
 
 
     //Méthode __construct qui va s'excecuter à l'instantacion de l'objet
-    public function __construct(array $donnees){
-        $this->hydrate($donnees);
+    public function __construct(array $donnees = NULL){
+        
+        if(isset($donnees)){
+            $this->hydrate($donnees);
+        }
     }
 
     //Méthode hydrate() pour "hydrater les objets lors de leur création"
@@ -81,5 +84,31 @@ class Personne {
         $this->_password = $password;
     }
 
+
+    //Fonctions supplémentaires
+
+    //Fonction pour qu'un client puisse s'authentifier
+    public function checklogin($email, $password){
+
+        $check = $GLOBALS['bdd']->query('SELECT COUNT(*) FROM personne WHERE email = "'.$email.'" AND password = "'.$password.'"');
+        $check = $check->fetchColumn();
+        //var_dump($check);
+
+        return $check;
+    }
+
+    //Fonction pour récupérer les informations d'un client après authentification
+    public function getClientInfos($email){
+        
+        
+        $client = $GLOBALS['bdd']->query('SELECT * FROM personne WHERE email = "'.$email.'"');
+
+        $client = $client->fetch();
+        //var_dump($client);
+
+        $this->hydrate($client);
+
+        return $this; 
+    }
 
 }
