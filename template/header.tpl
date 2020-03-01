@@ -24,6 +24,9 @@
                         <li class="nav-item">
                             <a class="nav-link mr-3" href="{$link->getPage('contact')}">CONTACT</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link mr-3" href="{$link->getPage('connexion')}">ESPACE CLIENT</a>
+                        </li>
                     </ul>
                 </div>
             </nav>

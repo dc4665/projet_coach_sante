@@ -1,6 +1,6 @@
 <?php
 
-class Fiche_suivi {
+class Fiche_suivi extends Objet {
 
     //Attributs de la classe
     private $_id_fiche;
@@ -11,28 +11,6 @@ class Fiche_suivi {
     private $_chemin_photo_face;
     private $_chemin_photo_profile;
 
-    //Méthode __construct qui va s'excecuter à l'instantacion de l'objet
-    public function __construct(array $donnees = NULL){
-        
-        if(isset($donnees)){
-            $this->hydrate($donnees);
-        }
-        
-    }
-
-    //Méthode hydrate() pour "hydrater les objets lors de leur création"
-    public function hydrate(array $donnees){
-        
-        foreach($donnees as $key=>$value){
-
-            $method = 'set'.ucfirst($key);
-
-            if(method_exists($this, $method)){
-
-                $this->$method($value);
-            }
-        }
-    }
 
     //getters
     public function getId_fiche(){

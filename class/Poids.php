@@ -1,28 +1,12 @@
 <?php
 
-class Poids {
+class Poids extends Objet {
     //Attributs de la classe
     private $_id_poids;
     private $_valeur_poids;
     private $_date_poids;
 
-    //Méthode __construct qui va s'excecuter à l'instantacion de l'objet
-    public function __construct(array $donnees){
-        $this->hydrate($donnees);
-    }
 
-    //Méthode hydrate() pour "hydrater les objets lors de leur création"
-    public function hydrate(array $donnees){
-        foreach($donnees as $key=>$value){
-
-            $method = 'set'.ucfirst($key);
-
-            if(method_exists($this, $method)){
-
-                $this->$method($value);
-            }
-        }
-    }
 
     //getters
     public function getId_poids(){

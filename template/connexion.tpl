@@ -12,6 +12,7 @@
             <label>Mot de passe</label>
             <input type="password" name="password" id="password" required><br/>
             <button type="submit" class="btn btn-primary" name="connexion">Connexion</button>
+            <a href="{$link->getPage('inscription')}" class="btn btn-primary">Pas encore membre? Je m'inscris!</a>
         </form>
     </div>
 
