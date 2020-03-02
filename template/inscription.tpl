@@ -24,9 +24,6 @@
         <label>Taille (en cm)</label>
         <input type="number" name="taille" id="taille" required /><br/>
 
-        <label>Poids (en kg)</label>
-        <input type="number" name="poids" id="poids" required /><br/>
-
         <label>Date de naissance</label>
         <input type="date" name="date_naissance" id="date_naissance" required /><br/>
 

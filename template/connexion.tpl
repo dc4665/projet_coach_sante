@@ -30,6 +30,12 @@
     <div class="">
         <h2>Connexion</h2>
         <form action="" method="post">
+            {if isset($erreur)}
+            <div>{$erreur}</div>
+            {/if}
+            {if isset($erreur_mail)}
+            <div>{$erreur_mail}</div>
+            {/if}
             <label>Email</label>
             <input type="email" name="email" id="email" required><br/>
             <label>Mot de passe</label>

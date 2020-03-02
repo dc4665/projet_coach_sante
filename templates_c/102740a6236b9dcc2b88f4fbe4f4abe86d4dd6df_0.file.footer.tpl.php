@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-02 13:11:14
+/* Smarty version 3.1.34-dev-7, created on 2020-03-02 13:40:22
   from 'C:\xampp\htdocs\projet_coach_sante\template\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5cf7e21734f1_37149547',
+  'unifunc' => 'content_5e5cfeb6bb1ea9_80445877',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e5cf7e21734f1_37149547 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5cfeb6bb1ea9_80445877 (Smarty_Internal_Template $_smarty_tpl) {
 ?><footer>
         <div class="container">
             
