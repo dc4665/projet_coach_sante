@@ -146,6 +146,19 @@ p
     position: absolute;
     background-image:url(../img/contact_resize.jpg);
     background-size: cover;
+
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#bg_connexion
+{
+    position: absolute;
+    background-image:url(../img/connexion_resize.jpg);
+    background-size: cover;
+
     top: 0;
     bottom: 0;
     right: 0;
@@ -331,6 +344,27 @@ nav a:hover
     color: #ffbf34;
 }
 
+/* Page de connexion */
+.connexion{
+    text-align: center;
+    padding: 30px;
+    background: #FFFFFF;
+    margin: 50px auto;
+
+}
+.connexion input[type="email"],
+.connexion input[type="password"],
+.connexion textarea,
+.connexion select
+{
+    text-align: center;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    color: #ffffff;
+    height: 45px;
+}
 
 /* Plan du Site*/
 #plan_site li

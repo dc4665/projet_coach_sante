@@ -42,7 +42,7 @@
         <label>Confirmation du Mot de Passe</label>
         <input type="password" name="password_check" id="password_check" required /><br/>
 
-        <button type="submit" name="inscription" class="btn btn-primary">Valider l'inscription</button>
+        <button type="submit" name="inscription" class="btn anton bg_yel_oni">Valider l'inscription</button>
 
     </form>
 {/block}
