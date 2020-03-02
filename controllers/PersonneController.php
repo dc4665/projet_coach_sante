@@ -1,15 +1,26 @@
 <?php
-/* CONTROLLER EN PHASE DE PROTOTYPE POUR TESTER L'AFFICHAGE */
 
-//Récupération de l'enail de du password depuis le formulaire de connexion.tpl
-$email = $_POST['email'];
-$password = $_POST['password'];
+//On vérifie l'id_role de l'utilisateur connecté 
+if($_SESSION['utilisateur']->getId_role() == 3){
 
-//Vérification de la validité de l'email et du mot de passe. On renvoit avec checklogin un int de 1 si les infos correspondent bien.
-$check = new Personne();
-$check = $check->checklogin($email, $password);
+    $fiches = new Fiche_suivi();
+    $fiches = $fiches->getFiches($_SESSION['utilisateur']->getId_personne());
 
-if($check == 1){
+    //Affectation des variables smarty
+    $smarty->assign(array(
+        'fiches' => $fiches,
+        'utilisateur' => $_SESSION['utilisateur']
+    ));
+
+    //Appel de personne.tpl
+    $smarty->display('template/personne.tpl');
+} 
+
+
+
+
+/* 
+if($_SESSION['utilisateur']->getId_role() == 3){
     //L'email et le mot de passe sont justes, on récupère les infos du client dans un objet $client
 
     $personne = new Personne();
@@ -43,4 +54,4 @@ if($check == 1){
 } elseif($check == 0) {
     echo('Password faux ');
 } 
-
+ */

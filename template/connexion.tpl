@@ -26,7 +26,8 @@
 
     </div>
     <!-- Partie formulaire de connexion-->
-    <div class="connexion">
+    {* remettre la class connexion, enlevé car formulaire blanc lors du clic *}
+    <div class="">
         <h2>Connexion</h2>
         <form action="" method="post">
             <label>Email</label>
