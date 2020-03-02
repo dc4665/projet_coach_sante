@@ -76,9 +76,24 @@ class Personne extends Objet {
     //Fonction pour ajouter une nouvelle Personne
     public function ajouterPersonne($nom, $prenom, $tel, $email, $password, $date_naissance, $sexe, $taille, $id_role = 3) {
 
-       $sql = $GLOBALS['bdd']->prepare('INSERT INTO personne (nom, prenom, tel, email, password, date_naissance, sexe, taille, id_role)');
+       $sql = $GLOBALS['bdd']->prepare('INSERT INTO personne (nom, prenom, tel, email, password, date_naissance, sexe, taille, id_role) VALUES (:nom, :prenom, :tel, :email, :password, :date_naissance, :sexe, :taille, :id_role)');
 
-       
+       $sql->bindValue(':nom', $nom);
+       $sql->bindValue(':prenom', $prenom);
+       $sql->bindValue(':tel', $tel);
+       $sql->bindValue(':email', $email);
+       $sql->bindValue(':password', password_hash($password, PASSWORD_DEFAULT));
+       $sql->bindValue(':date_naissance', $date_naissance);
+       $sql->bindValue(':sexe', $sexe);
+       $sql->bindValue(':taille', $taille);
+       $sql->bindValue(':id_role', $id_role);
+
+       $result = $sql->execute();
+
+       if($result === FALSE){
+           return 'Une erreur s\'est produite. Contactez-nous pour en savoir plus';
+       }
+
     }
 
 

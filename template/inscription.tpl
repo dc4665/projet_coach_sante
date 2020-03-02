@@ -8,6 +8,9 @@
                 <div class="row">
                     <div class="col-12 mt-5">
                         <form action="" method="post">
+                            {if isset($alert)}
+                                <div>{$alert}</div>
+                            {/if}
                             {* Parti pour que la personne puisse choisir son sexe *}
                             <p>Vous êtes : </p>     
                             <input type="radio" name="sexe" id="homme" value="homme" />
@@ -40,10 +43,11 @@
                             <label>Mot de passe</label>
                             <input type="password" name="password" id="password" required /><br/>
 
-                            <label>Confirmation du Mot de Passe</label>
-                            <input type="password" name="password_check" id="password_check" required /><br/>
-
                             <button type="submit" name="inscription" class="btn anton bg_yel_oni">Valider l'inscription</button>
+
+                            {if isset($success)}
+                                <div>{$success}</div>
+                            {/if}
                         </form>
                     </div>
                 </div>    

@@ -14,7 +14,29 @@ if($_SESSION['utilisateur']->getId_role() == 3){
 
     //Appel de personne.tpl
     $smarty->display('template/personne.tpl');
+
 } 
+
+//Si la personne connectée est Coach
+elseif($_SESSION['utilisateur']->getId_role() == 2) {
+
+    $smarty->assign(array(
+        'utilisateur' => $_SESSION['utilisateur']
+    ));
+
+    $smarty->display('template/personne.tpl');
+
+} 
+
+//Si la personne connecté est Coach et Administrateur
+elseif($_SESSION['utilisateur']->getId_role() == 1) {
+
+    $smarty->assign(array(
+        'utilisateur' => $_SESSION['utilisateur']
+    ));
+
+    $smarty->display('template/personne.tpl');
+}
 
 
 

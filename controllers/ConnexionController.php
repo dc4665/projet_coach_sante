@@ -15,7 +15,7 @@ if(isset($_POST['connexion'])){
         $user = $user->getPersonneInfos($email);
 
         //On vérifie à présent la validité du mot de passe
-        if($password == $user->getPassword()){
+        if(password_verify($password, $user->getPassword())){
             $_SESSION['utilisateur'] = $user;
             echo('<script>document.location.href="http://localhost/projet_coach_sante/?action=Personne"</script>'); 
         } else {
