@@ -1,11 +1,13 @@
 <?php
 /* Smarty version 3.1.34-dev-7, created on 2020-03-02 13:57:45
+/* Smarty version 3.1.34-dev-7, created on 2020-03-02 13:47:04
   from 'C:\xampp\htdocs\projet_coach_sante\template\connexion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
   'unifunc' => 'content_5e5d02c940b130_82216935',
+  'unifunc' => 'content_5e5d004811aa27_78666808',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -13,6 +15,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     array (
       0 => 'C:\\xampp\\htdocs\\projet_coach_sante\\template\\connexion.tpl',
       1 => 1583151787,
+      1 => 1583153221,
       2 => 'file',
     ),
   ),
@@ -21,6 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
 ),false)) {
 function content_5e5d02c940b130_82216935 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5d004811aa27_78666808 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -32,11 +36,17 @@ $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
 }
 /* {block "content"} */
 class Block_11248106865e5d02c94066c9_32362996 extends Smarty_Internal_Block
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15851296125e5d004810dcc2_38713464', "content");
+$_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
+}
+/* {block "content"} */
+class Block_15851296125e5d004810dcc2_38713464 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
     0 => 'Block_11248106865e5d02c94066c9_32362996',
+    0 => 'Block_15851296125e5d004810dcc2_38713464',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -70,6 +80,14 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <div class="connexion">
         <h2>Connexion</h2>
         <form action="" method="post">
+            <?php if (isset($_smarty_tpl->tpl_vars['erreur']->value)) {?>
+            <div><?php echo $_smarty_tpl->tpl_vars['erreur']->value;?>
+</div>
+            <?php }?>
+            <?php if (isset($_smarty_tpl->tpl_vars['erreur_mail']->value)) {?>
+            <div><?php echo $_smarty_tpl->tpl_vars['erreur_mail']->value;?>
+</div>
+            <?php }?>
             <label>Email</label>
             <input type="email" name="email" id="email" required><br/>
             <label>Mot de passe</label>

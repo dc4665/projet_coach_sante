@@ -73,6 +73,15 @@ class Personne extends Objet {
 
     //Fonctions supplémentaires
 
+    //Fonction pour ajouter une nouvelle Personne
+    public function ajouterPersonne($nom, $prenom, $tel, $email, $password, $date_naissance, $sexe, $taille, $id_role = 3) {
+
+       $sql = $GLOBALS['bdd']->prepare('INSERT INTO personne (nom, prenom, tel, email, password, date_naissance, sexe, taille, id_role)');
+
+       
+    }
+
+
     //Fonction pour vérifier que l'email entré par l'utilisateur est bon lors de la connexion
     public function getUserByEmail($email){
 
