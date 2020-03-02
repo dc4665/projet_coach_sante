@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-01 22:45:24
+/* Smarty version 3.1.34-dev-7, created on 2020-03-02 11:09:10
   from 'C:\xampp\htdocs\projet_coach_sante\template\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5c2cf4bf4832_61467545',
+  'unifunc' => 'content_5e5cdb466bd353_25271877',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd1e1c22dc8c68e86800dae859f4ab072c80f3b1c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projet_coach_sante\\template\\header.tpl',
-      1 => 1583099122,
+      1 => 1583143748,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e5c2cf4bf4832_61467545 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5cdb466bd353_25271877 (Smarty_Internal_Template $_smarty_tpl) {
 ?><header class="bg_yel_oni fixed-top shadow">
         
         <div class="container">
@@ -57,6 +57,16 @@ function content_5e5c2cf4bf4832_61467545 (Smarty_Internal_Template $_smarty_tpl)
                             <a class="nav-link mr-3" href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPage('connexion');?>
 ">ESPACE CLIENT</a>
                         </li>
+                        
+                                                <?php if (isset($_smarty_tpl->tpl_vars['utilisateur']->value)) {?>
+                        <li class="nav-item">
+                            <p>Bonjour<?php echo $_smarty_tpl->tpl_vars['utilisateur']->value->getPrenom();?>
+</p>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?action=connexion&session=out" class="btn btn-primary">Deconnexion</a>
+                        </li>
+                        <?php }?>
                     </ul>
                 </div>
             </nav>

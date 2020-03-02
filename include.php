@@ -22,6 +22,22 @@ $bdd = connexionpdo();
 //Création d'une variable superglobale accessible partout. On crée cette variable pour se connecter à la bdd. cette variable $GLOBALS est un array. GLOBALS est un keyword dans PHP!
 $GLOBALS['bdd'] = $bdd; 
 
+//On démarre une session
+session_start();
+
+//On transfert la session client de l'utilisateur dans une variable smarty. On vérifie d'abord l'existence de $_SESSION['utilisateur']. La session sera ainsi accessible sur toutes les pages du site. 
+if(isset($_SESSION['utilisateur'])){
+
+    $smarty->assign('utilisateur', $_SESSION['utilisateur']);
+}
+
+//Pour détruire une session si le boutton "deconnexion a été cliqué"
+if(isset($_GET['session'])){
+
+    //détruire une session
+    session_destroy();
+}
+
 //Instantacion d'un objet de la classe Link et sa déclaration globale
 $link = new Link();
 

@@ -73,26 +73,25 @@ class Personne extends Objet {
 
     //Fonctions supplémentaires
 
-    //Fonction pour qu'un client puisse s'authentifier
-    public function checklogin($email, $password){
+    //Fonction pour vérifier que l'email entré par l'utilisateur est bon lors de la connexion
+    public function getUserByEmail($email){
 
-        $check = $GLOBALS['bdd']->query('SELECT COUNT(*) FROM personne WHERE email = "'.$email.'" AND password = "'.$password.'"');
+        $check = $GLOBALS['bdd']->query('SELECT COUNT(*) FROM personne WHERE email = "'.$email.'"');
         $check = $check->fetchColumn();
-        //var_dump($check);
 
         return $check;
     }
 
-    //Fonction pour récupérer les informations d'un client après authentification
+    //Fonction pour récupérer les informations d'un utilisateur après authentification
     public function getPersonneInfos($email){
         
         
-        $client = $GLOBALS['bdd']->query('SELECT * FROM personne WHERE email = "'.$email.'"');
+        $utilisateur = $GLOBALS['bdd']->query('SELECT * FROM personne WHERE email = "'.$email.'"');
 
-        $client = $client->fetch();
-        //var_dump($client);
+        $utilisateur = $utilisateur->fetch();
+        //var_dump($utilisateur);
 
-        $this->hydrate($client);
+        $this->hydrate($utilisateur);
 
         return $this; 
     }

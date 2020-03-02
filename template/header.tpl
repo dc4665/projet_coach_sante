@@ -27,6 +27,16 @@
                         <li class="nav-item">
                             <a class="nav-link mr-3" href="{$link->getPage('connexion')}">ESPACE CLIENT</a>
                         </li>
+                        
+                        {* Vérifie la présence d'une session *}
+                        {if isset($utilisateur)}
+                        <li class="nav-item">
+                            <p>Bonjour{$utilisateur->getPrenom()}</p>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?action=connexion&session=out" class="btn btn-primary">Deconnexion</a>
+                        </li>
+                        {/if}
                     </ul>
                 </div>
             </nav>
