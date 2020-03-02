@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 02 mars 2020 à 16:24
--- Version du serveur :  10.4.8-MariaDB
--- Version de PHP :  7.3.11
+-- Généré le :  lun. 02 mars 2020 à 22:35
+-- Version du serveur :  10.4.10-MariaDB
+-- Version de PHP :  7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -55,6 +55,7 @@ INSERT INTO `commentaire` (`id_commentaire`, `alimentation_coach`, `activite_coa
 CREATE TABLE `fichesuivi` (
   `id_fiche` int(11) NOT NULL,
   `date_fiche` date NOT NULL,
+  `poids` int(11) NOT NULL,
   `alimentation` text NOT NULL,
   `activite` text NOT NULL,
   `commentaire` text NOT NULL,
@@ -67,19 +68,19 @@ CREATE TABLE `fichesuivi` (
 -- Déchargement des données de la table `fichesuivi`
 --
 
-INSERT INTO `fichesuivi` (`id_fiche`, `date_fiche`, `alimentation`, `activite`, `commentaire`, `chemin_photo_face`, `chemin_photo_profil`, `id_personne`) VALUES
-(1, '2020-02-11', 'Riz nature accompagné de dinde emincée', 'Course a pieds, Squats, Superman', 'Cela fut très dur', 'google.com/photo-de-face', 'google.com/photo-de-profil', 12),
-(2, '2020-02-18', 'Riz avec de la dinde poêlée et des légumes vapeur', 'Seance de muscu a la salle', 'Eprouvant physiquement', 'google.com/photo-de-face', 'google.com/photo-de-profil', 12),
-(3, '2020-01-01', 'Salade de thon et haricots blancs, deux tranches de pain (blé entier), quartiers d\'orange', 'Running sur 5km, Développé couché, squats', 'La première semaine est très dure', 'google.com/photo-de-face', 'google.com/photo-de-profil', 13),
-(4, '2020-01-08', 'Salade de betteraves et mangues, tranche de pain (blé entier), Morue aux olives et fenouil, Orge et Ananas glacé au rhum', 'Running sur 5km, Presse, 1 séance de crossfit', 'Je sens deja que je prend un peu en condition physique', 'google.com/photo-de-face', 'google.com/photo-de-profil', 13),
-(5, '2020-01-15', 'Filet de saumon, riz blanc et epinards', '5km sur Vélo elliptique, course de 5km sur tapis', 'Tout doucement je sens que l\'alimentation a un gros rôle a jouer dans ma perte de poids', 'google.com/photo-de-face', 'google.com/photo-de-profil', 13),
-(6, '2020-01-22', 'Patates douces, poulet, brocoli, carottes, chou-fleur cuits a la vapeur', '6km sur Vélo elliptique, course de 6km sur tapis', 'J\'essaie d\'augmenter les distances pour dépasser mes limites', 'google.com/photo-de-face', 'google.com/photo-de-profil', 13),
-(7, '2020-02-25', 'Poisson au court bouillon, 2 tomates avec un peu d\'huile d\'olive', 'Course a pieds de 4km, un peu de développé couché a la salle', 'Je remercie mon coach de m\'avoir lancé la dedans, c\'est dur mais ça fait du bien de se dépenser !', 'google.com/photo-de-face', 'google.com/photo-de-profil', 12),
-(8, '2020-03-03', 'Escalope de poulet, poivrons, yahourt', 'Course a pieds de 5km, un peu de développé couché a la salle, squats, 1 séance de cross fit', 'Je commence vraiment a sentir la différence par rapport a la première semaine', 'google.com/photo-de-face', 'google.com/photo-de-profil', 12),
-(9, '2020-01-04', 'Spaghettis Bolognaise avec pâtes complètes et légumes', 'Sprint fractionné, 5km de velo', 'Je me dépense mais j\'ai du mal', 'google.com/photo-de-face', 'google.com/photo-de-profil', 14),
-(10, '2020-01-11', 'Blanc de poulet, riz complet, fromage blanc et une banane', '2 séances de crossfit, 1 match de tennis d\'une heure et demi', 'Mon cardio est pas très bon mais je me force pour aller jusqu\'au bout de la séance', 'google.com/photo-de-face', 'google.com/photo-de-profil', 14),
-(11, '2020-01-18', 'Poisson a la vapeur et brocolis, yahourt', 'Séance de musculation a la salle de sport et quelques longueur a la piscine', 'Je sens une différence en montant les escaliers, je ne suis plus essoufflé arrivé en haut !', 'google.com/photo-de-face', 'google.com/photo-de-profil', 14),
-(12, '2020-01-25', 'Roti de boeuf froid, 2 tranches de pain de seigle, laitue et tomates arrosées d\'huile d\'olive', '4.93km a velo et 4.93km de course a pieds', 'Je revis physiquement ! Ce programme est un vrai changement dans ma vie ! ', 'google.com/photo-de-face', 'google.com/photo-de-profil', 14);
+INSERT INTO `fichesuivi` (`id_fiche`, `date_fiche`, `poids`, `alimentation`, `activite`, `commentaire`, `chemin_photo_face`, `chemin_photo_profil`, `id_personne`) VALUES
+(1, '2020-02-11', 0, 'Riz nature accompagné de dinde emincée', 'Course a pieds, Squats, Superman', 'Cela fut très dur', 'google.com/photo-de-face', 'google.com/photo-de-profil', 12),
+(2, '2020-02-18', 0, 'Riz avec de la dinde poêlée et des légumes vapeur', 'Seance de muscu a la salle', 'Eprouvant physiquement', 'google.com/photo-de-face', 'google.com/photo-de-profil', 12),
+(3, '2020-01-01', 0, 'Salade de thon et haricots blancs, deux tranches de pain (blé entier), quartiers d\'orange', 'Running sur 5km, Développé couché, squats', 'La première semaine est très dure', 'google.com/photo-de-face', 'google.com/photo-de-profil', 13),
+(4, '2020-01-08', 0, 'Salade de betteraves et mangues, tranche de pain (blé entier), Morue aux olives et fenouil, Orge et Ananas glacé au rhum', 'Running sur 5km, Presse, 1 séance de crossfit', 'Je sens deja que je prend un peu en condition physique', 'google.com/photo-de-face', 'google.com/photo-de-profil', 13),
+(5, '2020-01-15', 0, 'Filet de saumon, riz blanc et epinards', '5km sur Vélo elliptique, course de 5km sur tapis', 'Tout doucement je sens que l\'alimentation a un gros rôle a jouer dans ma perte de poids', 'google.com/photo-de-face', 'google.com/photo-de-profil', 13),
+(6, '2020-01-22', 0, 'Patates douces, poulet, brocoli, carottes, chou-fleur cuits a la vapeur', '6km sur Vélo elliptique, course de 6km sur tapis', 'J\'essaie d\'augmenter les distances pour dépasser mes limites', 'google.com/photo-de-face', 'google.com/photo-de-profil', 13),
+(7, '2020-02-25', 0, 'Poisson au court bouillon, 2 tomates avec un peu d\'huile d\'olive', 'Course a pieds de 4km, un peu de développé couché a la salle', 'Je remercie mon coach de m\'avoir lancé la dedans, c\'est dur mais ça fait du bien de se dépenser !', 'google.com/photo-de-face', 'google.com/photo-de-profil', 12),
+(8, '2020-03-03', 0, 'Escalope de poulet, poivrons, yahourt', 'Course a pieds de 5km, un peu de développé couché a la salle, squats, 1 séance de cross fit', 'Je commence vraiment a sentir la différence par rapport a la première semaine', 'google.com/photo-de-face', 'google.com/photo-de-profil', 12),
+(9, '2020-01-04', 0, 'Spaghettis Bolognaise avec pâtes complètes et légumes', 'Sprint fractionné, 5km de velo', 'Je me dépense mais j\'ai du mal', 'google.com/photo-de-face', 'google.com/photo-de-profil', 14),
+(10, '2020-01-11', 0, 'Blanc de poulet, riz complet, fromage blanc et une banane', '2 séances de crossfit, 1 match de tennis d\'une heure et demi', 'Mon cardio est pas très bon mais je me force pour aller jusqu\'au bout de la séance', 'google.com/photo-de-face', 'google.com/photo-de-profil', 14),
+(11, '2020-01-18', 0, 'Poisson a la vapeur et brocolis, yahourt', 'Séance de musculation a la salle de sport et quelques longueur a la piscine', 'Je sens une différence en montant les escaliers, je ne suis plus essoufflé arrivé en haut !', 'google.com/photo-de-face', 'google.com/photo-de-profil', 14),
+(12, '2020-01-25', 0, 'Roti de boeuf froid, 2 tranches de pain de seigle, laitue et tomates arrosées d\'huile d\'olive', '4.93km a velo et 4.93km de course a pieds', 'Je revis physiquement ! Ce programme est un vrai changement dans ma vie ! ', 'google.com/photo-de-face', 'google.com/photo-de-profil', 14);
 
 -- --------------------------------------------------------
 

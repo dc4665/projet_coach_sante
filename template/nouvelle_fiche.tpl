@@ -6,8 +6,11 @@
         <div class="container">
 
             <form action="" method="post">
+                <label>Poids (en kg)</label>
+                <input type="number" name="poids" id="poids" required /><br/>
+
                 <label>Date</label>
-                <textarea type="date" name="date" id="date" required /></textarea><br/>
+                <input type="date" name="date" id="date" required /><br/>
 
                 <label>Alimentation</label>
                 <textarea type="text" name="alimentation" id="alimentation" required/></textarea><br/>
@@ -19,6 +22,11 @@
                 <textarea type="text" name="commentaire" id="commentaire" required/></textarea><br/>
 
                 <button type="submit" name="nouvelle_fiche" class="btn anton bg_yel_oni">Soumettre la fiche</button> 
+
+                {if isset($success)}
+                    <div>{$success}</div>
+                {/if}
+
             </form> 
 
         </div> 
