@@ -1,15 +1,54 @@
-{extends file="template/layout.tpl"}
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-03-02 13:56:44
+  from 'C:\xampp\htdocs\projet_coach_sante\template\inscription.tpl' */
 
-{block name="content"}
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e5d028ce49f67_18253054',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '5ec51634a1015efbdd9204aba54a5c89c5e136c9' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\projet_coach_sante\\template\\inscription.tpl',
+      1 => 1583153802,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5e5d028ce49f67_18253054 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_loadInheritance();
+$_smarty_tpl->inheritance->init($_smarty_tpl, true);
+?>
 
-    {* Formulaire d'inscription *}
-        <img class="img-fluid img thumbnail" src="img/banniere_espaceclient.jpg">
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_553861725e5d028ce49385_20700681', "content");
+$_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
+}
+/* {block "content"} */
+class Block_553861725e5d028ce49385_20700681 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'content' => 
+  array (
+    0 => 'Block_553861725e5d028ce49385_20700681',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+
+            <img class="img-fluid img thumbnail" src="img/banniere_espaceclient.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-12 mt-5">
                         <form action="" method="post">
-                            {* Parti pour que la personne puisse choisir son sexe *}
-                            <p>Vous êtes : </p>     
+                                                        <p>Vous êtes : </p>     
                             <input type="radio" name="sexe" id="homme" value="homme" />
                             <label for="homme">Homme</label>      
                             <input type="radio" name="sexe" id="femme" value="femme" /> 
@@ -18,8 +57,7 @@
                             <label for="autre">Autre</label>
                             <br/>
 
-                            {* J'ai volontairement mis des espaces pour que tu puisses mieux t'y retrouver *}
-                            <label>Nom</label>
+                                                        <label>Nom</label>
                             <input type="text" name="nom" id="nom" required /><br/>
 
                             <label>Prenom</label>
@@ -52,4 +90,8 @@
                 </div>    
             </div>        
     
-{/block}
+<?php
+}
+}
+/* {/block "content"} */
+}
