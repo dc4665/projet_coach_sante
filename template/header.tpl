@@ -23,23 +23,26 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mr-3" href="{$link->getPage('contact')}">CONTACT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mr-3" href="{$link->getPage('connexion')}">ESPACE CLIENT</a>
-                        </li>
-                        
-                        {* Vérifie la présence d'une session *}
-                        {if isset($utilisateur)}
-                        <li class="nav-item">
-                            <p>Bonjour{$utilisateur->getPrenom()}</p>
-                        </li>
-                        <li class="nav-item">
-                            <a href="?action=connexion&session=out" class="btn btn-primary">Deconnexion</a>
-                        </li>
-                        {/if}
+                        </li>   
                     </ul>
                 </div>
-            </nav>
+            </nav>           
         </div>
+
+        <div>
+            <div class="container text-center">
+                <div class="row align-justify">
+                    {if empty($utilisateur)}
+                    <a class="btn btn-primary anton mb-1" href="{$link->getPage('connexion')}" style="margin: auto">ESPACE CLIENT</a>
+                    {/if}
+                    {* Vérifie la présence d'une session *}
+                    {if isset($utilisateur)}
+                        <span class="col anton">{$utilisateur->getPrenom()}</span>
+                        <a href="{$link->getPage('personne')}" class="col btn">Tableau de bord</a>
+                        <a href="?action=connexion&session=out" class="col btn button mb-1">Deconnexion</a>
+                    {/if}
+                </div>
+            </div>
+        <div>
 
     </header>
