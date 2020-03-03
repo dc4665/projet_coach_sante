@@ -18,10 +18,15 @@ if($_SESSION['utilisateur']->getId_role() == 3){
 } 
 
 //Si la personne connectée est Coach
-elseif($_SESSION['utilisateur']->getId_role() == 2) {
+elseif($_SESSION['utilisateur']->getId_role() == 2 OR 1) {
 
+    //On récupère toutes les fiches de suivi qui ont une valeur "actif" de 0. 0 voulant dire que la fiche n'a ppas encore été commentée par un coach
+    $fiches = new Fiche_suivi();
+    $fiches = $fiches->getAllFichesAttentes();
+   
     $smarty->assign(array(
-        'utilisateur' => $_SESSION['utilisateur']
+        'utilisateur' => $_SESSION['utilisateur'],
+        'fiches' => $fiches
     ));
 
     $smarty->display('template/personne.tpl');
@@ -29,14 +34,14 @@ elseif($_SESSION['utilisateur']->getId_role() == 2) {
 } 
 
 //Si la personne connecté est Coach et Administrateur
-elseif($_SESSION['utilisateur']->getId_role() == 1) {
+/* elseif($_SESSION['utilisateur']->getId_role() == 1) {
 
     $smarty->assign(array(
         'utilisateur' => $_SESSION['utilisateur']
     ));
 
     $smarty->display('template/personne.tpl');
-}
+} */
 
 
 

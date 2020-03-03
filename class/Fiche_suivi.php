@@ -8,6 +8,7 @@ class Fiche_suivi extends Objet {
     private $_alimentation;
     private $_activite;
     private $_commentaire;
+    private $_actif;
     private $_chemin_photo_face;
     private $_chemin_photo_profile;
 
@@ -31,6 +32,10 @@ class Fiche_suivi extends Objet {
 
     public function getCommentaire(){
         return $this->_commentaire;
+    }
+
+    public function getActif(){
+        return $this->_actif;
     }
 
     public function getChemin_photo_face(){
@@ -60,6 +65,10 @@ class Fiche_suivi extends Objet {
 
     public function setCommentaire($commentaire){
         $this->_commentaire = $commentaire;
+    }
+
+    public function setActif($actif){
+        $this->_actif = $actif;
     }
 
     public function setChemin_photo_face($chemin_photo_face){
@@ -92,12 +101,12 @@ class Fiche_suivi extends Objet {
         }
     }
 
-    //Méthode pour récupérer les fiches de suivis
+    //Méthode pour récupérer les fiches de suivis d'un utilisateur précis
     public function getFiches(int $id_personne){
 
         $fiches = [];
         
-        $sql = $GLOBALS['bdd']->query('SELECT * from fichesuivi WHERE id_personne =' .$id_personne);
+        $sql = $GLOBALS['bdd']->query('SELECT * FROM fichesuivi WHERE id_personne =' .$id_personne);
 
         while($donnees = $sql->fetch(PDO::FETCH_ASSOC)){
 
@@ -111,7 +120,7 @@ class Fiche_suivi extends Objet {
     //Méthode pour récupérer UNE fiche SEULEMENT
     public function getFiche(int $id_fiche){
         
-        $sql = $GLOBALS['bdd']->query('SELECT * from fichesuivi WHERE id_fiche=' .$id_fiche);
+        $sql = $GLOBALS['bdd']->query('SELECT * FROM fichesuivi WHERE id_fiche=' .$id_fiche);
 
         $sql = $sql->fetch();
 
@@ -119,4 +128,31 @@ class Fiche_suivi extends Objet {
 
         return $this;
     }
+
+    //Méthde pour récupérer toutes les fiches de suivis de tous les clients qui n'ont pas encore été commentées par un coach.
+    public function getAllFichesAttentes(){
+
+        $fiches = [];
+        
+        $sql = $GLOBALS['bdd']->query('SELECT p.nom, p.prenom, f.date_fiche, f.id_fiche FROM fichesuivi f LEFT JOIN personne p ON f.id_personne = p.id_personne WHERE f.actif = 0');
+
+        while($donnees = $sql->fetch()){
+
+            $fiches[] = $donnees;
+        }
+
+        return $fiches;
+
+        /* $sql = $GLOBALS['bdd']->query('SELECT * FROM fichesuivi WHERE actif = 0 ');
+
+        while($donnees = $sql->fetch(PDO::FETCH_ASSOC)){
+
+            $fiches[] = new Fiche_suivi($donnees);
+        }
+
+        return $fiches; */
+
+    }
+
+    
 }

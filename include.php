@@ -36,6 +36,8 @@ if(isset($_GET['session'])){
 
     //détruire une session
     session_destroy();
+    //redirige vers la page de connexion en évitant le paramètre session=out qui poser conflit
+    echo('<script>document.location.href="http://localhost/projet_coach_sante/?action=connexion"</script>');
 }
 
 //Instantacion d'un objet de la classe Link et sa déclaration globale
