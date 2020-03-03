@@ -73,15 +73,16 @@ class Fiche_suivi extends Objet {
 
     //Méthodes de CRUD 
     //Méthode pour ajouter une nouvelle fiche
-    public function ajouterFiche($date, $poids, $alimentation, $activite, $commentaire, $id_personne){
+    public function ajouterFiche($date, $poids, $alimentation, $activite, $commentaire, $actif, $id_personne){
         
-        $sql = $GLOBALS['bdd']->prepare('INSERT INTO fichesuivi (date_fiche, poids, alimentation, activite, commentaire, id_personne) VALUES (:date, :poids, :alimentation, :activite, :commentaire, :id_personne)');
+        $sql = $GLOBALS['bdd']->prepare('INSERT INTO fichesuivi (date_fiche, poids, alimentation, activite, commentaire, actif, id_personne) VALUES (:date, :poids, :alimentation, :activite, :commentaire, :actif, :id_personne)');
 
         $sql->bindValue(':date', $date);
         $sql->bindValue(':poids', $poids);
         $sql->bindValue(':alimentation', $alimentation);
         $sql->bindValue(':activite', $activite);
         $sql->bindValue(':commentaire', $commentaire);
+        $sql->bindValue(':actif', $actif);
         $sql->bindValue(':id_personne', $id_personne);
 
         $result = $sql->execute();

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-03-02 22:51:11
+/* Smarty version 3.1.34-dev-7, created on 2020-03-03 09:04:40
   from 'C:\xampp\htdocs\projet_coach_sante\template\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e5d7fcf6ed557_31848021',
+  'unifunc' => 'content_5e5e0f98c05003_35742303',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '102740a6236b9dcc2b88f4fbe4f4abe86d4dd6df' => 
     array (
       0 => 'C:\\xampp\\htdocs\\projet_coach_sante\\template\\footer.tpl',
-      1 => 1583092266,
+      1 => 1582616066,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e5d7fcf6ed557_31848021 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e5e0f98c05003_35742303 (Smarty_Internal_Template $_smarty_tpl) {
 ?><footer>
         <div class="container">
             

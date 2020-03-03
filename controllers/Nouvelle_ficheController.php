@@ -11,11 +11,12 @@ if(isset($_SESSION['utilisateur'])){
         $alimentation = ($_POST['alimentation']);
         $activite = ($_POST['activite']);
         $commentaire = ($_POST['commentaire']);
+        $actif = 0;
         $id_personne = ($_SESSION['utilisateur']->getId_personne());
         
         //On instancie un nouvelle objet de la class Fiche pour utiliser une méthode
         $fiche = new Fiche_suivi();
-        $fiche->ajouterFiche($date, $poids, $alimentation, $activite, $commentaire, $id_personne);
+        $fiche->ajouterFiche($date, $poids, $alimentation, $activite, $commentaire, $actif, $id_personne);
 
         $smarty->assign('success', 'Une nouvelle fiche a bien été ajoutée, nos coachs l\'examinerons le plus rapidement possible!');
     }
