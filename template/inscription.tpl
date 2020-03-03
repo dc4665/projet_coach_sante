@@ -1,56 +1,77 @@
 {extends file="template/layout.tpl"}
 
 {block name="content"}
+    <div class="bandeau">
+            <div id="bg_connexion">
 
-    {* Formulaire d'inscription *}
-        <img class="img-fluid img thumbnail" src="img/banniere_espaceclient.jpg">
+            </div>
+                <div class="bg_opacity">
+                </div>
+
             <div class="container">
-                <div class="row">
+                <div class="row text-center">
                     <div class="col-12 mt-5">
-                        <form action="" method="post">
-                            {if isset($alert)}
-                                <div>{$alert}</div>
-                            {/if}
-                            {* Parti pour que la personne puisse choisir son sexe *}
-                            <p>Vous êtes : </p>     
-                            <input type="radio" name="sexe" id="homme" value="homme" />
-                            <label for="homme">Homme</label>      
-                            <input type="radio" name="sexe" id="femme" value="femme" /> 
-                            <label for="femme">Femme</label>       
-                            <input type="radio" name="sexe" id="autre" value="autre" />
-                            <label for="autre">Autre</label>
-                            <br/>
+                        <h1 class="white big_font mt-5">ESPACE CLIENT</h1>
 
-                            {* J'ai volontairement mis des espaces pour que tu puisses mieux t'y retrouver *}
-                            <label>Nom</label>
-                            <input type="text" name="nom" id="nom" required /><br/>
-
-                            <label>Prenom</label>
-                            <input type="text" name="prenom" id="prenom" required /><br/>
-
-                            <label>Taille (en cm)</label>
-                            <input type="number" name="taille" id="taille" required /><br/>
-
-                            <label>Date de naissance</label>
-                            <input type="date" name="date_naissance" id="date_naissance" required /><br/>
-
-                            <label>Email</label>
-                            <input type="email" name="email" id="email" required /><br/>
-
-                            <label>Téléphone</label>
-                            <input type="tel" name="tel" id="tel" required /><br/>
-
-                            <label>Mot de passe</label>
-                            <input type="password" name="password" id="password" required /><br/>
-
-                            <button type="submit" name="inscription" class="btn anton bg_yel_oni">Valider l'inscription</button>
-
-                            {if isset($success)}
-                                <div>{$success}</div>
-                            {/if}
-                        </form>
                     </div>
-                </div>    
+                    <div class="offset-md-3 col-12 col-md-6 text-left mt-5">
+                        <p class="white">
+                            Postez vos fiches de suivi, et suivez les recommandations de votre Coach Santé dans votre espace personnel
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+    </div>
+    {* Formulaire d'inscription *}
+            <div style="margin-top: 50px" class="container form_font anton">
+                <h2 style="text-align: center" class="big_font">INSCRIPTION</h2>
+                    <div class="row">
+                        <div class="col-12 col-md-6 ml-auto mr-auto">
+                            <form action="" method="post"><br>
+                                {if isset($alert)}
+                                    <div>{$alert}</div>
+                                {/if}
+
+                                {* Parti pour que la personne puisse choisir son sexe *}
+                                <p class="medium_font anton">VOUS ÊTES : </p>     
+                                <input type="radio" name="sexe" id="homme" value="homme">
+                                <label for="homme">Homme</label>      
+                                <input type="radio" name="sexe" id="femme" value="femme"> 
+                                <label for="femme">Femme</label>       
+                                <br/>
+
+                                {* J'ai volontairement mis des espaces pour que tu puisses mieux t'y retrouver *}
+                                <label>Nom</label>
+                                <input type="text" class="form-control" name="nom" id="nom" required />
+
+                                <label>Prénom</label>
+                                <input type="text" class="form-control" name="prenom" id="prenom" required />
+
+                                <label>Taille (en CM)</label>
+                                <input type="number" class="form-control" name="taille" id="taille" required />
+
+                                <label>Date de naissance</label>
+                                <input type="date" class="form-control" name="date_naissance" id="date_naissance" required />
+
+                                <label>E-Mail</label>
+                                <input type="email" class="form-control" name="email" id="email" required />
+
+                                <label>Téléphone</label>
+                                <input type="tel" class="form-control" name="tel" id="tel" required />
+
+                                <label>Mot de passe</label>
+                                <input type="password" class="form-control" name="password" id="password" required /><br/>
+
+                                <button style="margin-bottom: 50px" type="submit" name="inscription" class="btn anton bg_yel_oni btn-block">VALIDER L'INSCRIPTION</button>
+
+                                {if isset($success)}
+                                    <div>{$success}</div>
+                                {/if}
+                            </form>
+                        </div>
+                    </div>    
             </div>        
     
     

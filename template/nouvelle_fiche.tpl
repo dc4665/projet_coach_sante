@@ -1,10 +1,30 @@
 {extends file="template/layout.tpl"}
 
 {block name="content"}
-    <div style="margin-top: 200px"></div> 
-    <h1>Soumettre une nouvelle fiche de suivi</h1>
-        <div class="container">
+    <div class="bandeau">
+            <div id="bg_connexion">
 
+            </div>
+                <div class="bg_opacity">
+                </div>
+
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 mt-5">
+                        <h1 class="white big_font mt-5">ESPACE CLIENT</h1>
+
+                    </div>
+                    <div class="offset-md-3 col-12 col-md-6 text-left mt-5">
+                        <p class="white">
+                            Postez vos fiches de suivi, et suivez les recommandations de votre Coach Santé dans votre espace personnel
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="connexion">
+        <h2 class="">VOTRE FICHE DE SUIVI DE LA SEMAINE</h2>
             <form action="" method="post">
                 <label>Poids (en kg)</label>
                 <input type="number" name="poids" id="poids" required /><br/>
@@ -19,15 +39,13 @@
                 <textarea type="text" name="activite" id="activite" required/></textarea><br/>
 
                 <label>Commentaire</label>
-                <textarea type="text" name="commentaire" id="commentaire" required/></textarea><br/>
+                <textarea type="text" name="commentaire" id="commentaire" ></textarea><br/>
 
-                <button type="submit" name="nouvelle_fiche" class="btn anton bg_yel_oni">Soumettre la fiche</button> 
+                <button type="submit" name="nouvelle_fiche" class="btn anton bg_yel_oni btn-lg">ENVOYER</button> 
 
                 {if isset($success)}
                     <div>{$success}</div>
                 {/if}
-
-            </form> 
-
-        </div> 
+            </form>  
+    </div>     
 {/block}

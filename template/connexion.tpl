@@ -28,7 +28,7 @@
     <!-- Partie formulaire de connexion-->
     {* remettre la class connexion, enlevé car formulaire blanc lors du clic *}
     <div class="connexion">
-        <h2>Connexion</h2>
+        <h2 style="margin-bottom: 30px" class="big_font">CONNEXION</h2>
         <form action="" method="post">
             {if isset($erreur)}
             <div>{$erreur}</div>
@@ -36,12 +36,12 @@
             {if isset($erreur_mail)}
             <div>{$erreur_mail}</div>
             {/if}
-            <label>Email</label>
+            <label class="form_font anton">E-MAIL</label>
             <input type="email" name="email" id="email" required><br/>
-            <label>Mot de passe</label>
+            <label class="form_font anton">MOT DE PASSE</label>
             <input type="password" name="password" id="password" required><br/>
-            <button type="submit" class="btn anton bg_yel_oni" name="connexion">Connexion</button>
-            <a href="{$link->getPage('inscription')}" class="btn anton bg_yel_oni">Pas encore membre? Je m'inscris!</a>
+            <button style="margin-top: 30px" type="submit" class="btn anton bg_yel_oni btn-lg" name="connexion">CONNEXION</button>
+            <a href="{$link->getPage('inscription')}" style="margin-top: 30px" class="btn anton yellow bg_black btn-lg">Pas encore membre? Je M'inscris!</a>
         </form>
     </div>
 

@@ -26,6 +26,11 @@ p
     background-color: #ffffff;
 }
 
+.bg_black
+{
+    background-color: #000000;
+}
+
 /* Police & Couleur Police */
 .anton
 {
@@ -42,9 +47,14 @@ p
     color: #ffffff;
 }
 
+.yellow
+{
+    color:#ffbf34;
+}
+
 .medium_font
 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .big_font
@@ -362,6 +372,23 @@ nav a:hover
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
     height: 45px;
+}
+/*Fiche de suivi côté client*/
+#clipboard
+{
+    width: 130px;
+}
+
+.fiche_suivi
+{
+    color: #000000;
+    
+}
+
+.fiche_suivi:hover
+{
+    color: #ffbf34;
+    text-decoration: none;
 }
 
 /* Plan du Site*/

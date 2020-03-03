@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-12 mt-5">
-                    <h1 class="white big_font responsive_title mt-5">Programmes</h1>
+                    <h1 class="white big_font responsive_title mt-5">PROGRAMMES</h1>
 
                 </div>
                 <div class="offset-md-3 col-12 col-md-6 text-left mt-5">
