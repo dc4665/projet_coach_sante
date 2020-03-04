@@ -29,7 +29,7 @@
     {* remettre la class connexion, enlevé car formulaire blanc lors du clic *}
     <div class="container">
         <div class="connexion">
-            <h2 style="margin-bottom: 30px" class="big_font">CONNEXION</h2>
+            <h2 style="margin-top: 50px" class="big_font">CONNEXION</h2>
             {* Condition qui s'active pour confirmer l'inscription d'un nouveau membre *}
             {if isset($success)}
                 <div class="alert-success">{$success}</div>
@@ -45,8 +45,8 @@
                 <input type="email" class="col-3 col-md-3 ml-auto mr-auto form-control" name="email" id="email" required><br/>
                 <label class="form_font anton">MOT DE PASSE</label>
                 <input type="password" class="col-3 col-md-3 ml-auto mr-auto form-control" name="password" id="password" required><br/>
-                <button style="margin-top: 30px" type="submit" class="btn anton bg_yel_oni btn-lg" name="connexion">CONNEXION</button>
-                <a href="{$link->getPage('inscription')}" style="margin-top: 30px" class="btn anton yellow bg_black btn-lg">Pas encore membre? Je M'inscris!</a>
+                <button style="margin-bottom: 50px" type="submit" class="btn anton bg_yel_oni btn-lg" name="connexion">CONNEXION</button>
+                <a href="{$link->getPage('inscription')}" style="margin-bottom: 50px" class="btn anton yellow bg_black btn-lg">Pas encore membre? Je M'inscris!</a>
             </form>
         </div>
     </div>

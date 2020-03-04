@@ -33,13 +33,13 @@
                 <div class="connexion">
                     <h2 class="medium_font yellow">Résumé de votre fiche du: {$fiche->getDate_fiche()}</h2>
                     <br>
-                    <label style="color: grey" class="form-font anton">Alimentation (Saisissez vos repas de la semaine)</label>
+                    <label style="" class="form-font anton">Alimentation (Saisissez vos repas de la semaine)</label>
                     <p>{$fiche->getAlimentation()}</p>
-                    <label style="color: grey" class="form-font anton">Activités de la semaine <br> (Indiquez les exercices et la durée de vos entrainements)</label>
+                    <label style="" class="form-font anton">Activités de la semaine <br> (Indiquez les exercices et la durée de vos entrainements)</label>
                     <p>{$fiche->getActivite()}</p>
-                    <label style="color: grey" class="form-font anton">Commentaire</label>
+                    <label style="" class="form-font anton">Commentaire</label>
                     <p>{$fiche->getCommentaire()}</p>
-                        <a href="{$link->getPage('personne')}" class="col-3 col-md-3 ml-auto mr-auto btn anton yellow bg_black btn-lg">RETOUR</a>
+                        <a style="margin-bottom: 50px" href="{$link->getPage('personne')}" class="col-3 col-md-3 ml-auto mr-auto btn anton yellow bg_black btn-lg">RETOUR</a>
                 </div>
 
             {* Block qui s'affiche si un coach a laissé des commentaires sur la fiche *}

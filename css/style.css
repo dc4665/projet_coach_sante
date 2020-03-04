@@ -64,7 +64,7 @@ p
 
 .form_font
 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
 }
 
 .uppercase
@@ -201,6 +201,17 @@ p
 {
     position: absolute;
     background-image:url(../img/talkin_resize_1.jpg);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#bg_espace_coach
+{
+    position: absolute;
+    background-image:url(../img/coach-training-responsive-mobile.jpg);
     background-size: cover;
     top: 0;
     bottom: 0;
@@ -354,20 +365,17 @@ nav a:hover
     color: #ffbf34;
 }
 
-/* Page de connexion classe de Léo*/
+/* Page de connexion */
 .connexion{
     text-align: center;
-    padding: 30px;
-    margin: 50px auto;
-
 }
 .connexion input[type="email"],
 .connexion input[type="password"],
 .connexion textarea,
 .connexion select
 {
-    text-align: center;
-    /*outline: none;
+    /*text-align: center;
+    outline: none;
     border: none;
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;

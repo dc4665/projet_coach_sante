@@ -1,6 +1,47 @@
-{extends file="template/layout.tpl"}
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-03-04 16:20:02
+  from 'C:\xampp\htdocs\projet_coach_sante\template\nouvelle_fiche.tpl' */
 
-{block name="content"}
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e5fc722d54ea1_84659297',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'd8c3927b997006a489db0b0d3146d508023d4641' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\projet_coach_sante\\template\\nouvelle_fiche.tpl',
+      1 => 1583335200,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5e5fc722d54ea1_84659297 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_loadInheritance();
+$_smarty_tpl->inheritance->init($_smarty_tpl, true);
+?>
+
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1203541965e5fc722d546b1_99604804', "content");
+$_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/layout.tpl");
+}
+/* {block "content"} */
+class Block_1203541965e5fc722d546b1_99604804 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'content' => 
+  array (
+    0 => 'Block_1203541965e5fc722d546b1_99604804',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
     <div class="bandeau">
             <div id="bg_connexion">
 
@@ -46,4 +87,8 @@
 
             </form>  
     </div>     
-{/block}
+<?php
+}
+}
+/* {/block "content"} */
+}
