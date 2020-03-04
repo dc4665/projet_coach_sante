@@ -44,9 +44,6 @@
 
                 <button type="submit" name="nouvelle_fiche" class="col-4 col-md-4 ml-auto mr-auto btn anton bg_yel_oni btn-block">ENVOYER</button> 
 
-                {if isset($success)}
-                    <div>{$success}</div>
-                {/if}
             </form>  
     </div>     
 {/block}

@@ -26,4 +26,10 @@ if(isset($_POST['connexion'])){
     }
 }
 
+//Condition qui s'active quand un nouveau client a fini de s'inscrire sur le site
+if(isset($_GET['confirmation'])){
+    
+    $smarty->assign('success', 'Vous êtes à présent membre de Coach Santé! Connectez-vous à présent!');
+}
+
 $smarty->display('template/connexion.tpl');

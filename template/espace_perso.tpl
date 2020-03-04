@@ -25,9 +25,6 @@
 
                 <button type="submit" name="modification" class="btn anton bg_yel_oni">Valider les changements</button>
 
-                {if isset($success)}
-                    <p>{$success}</p>
-                {/if}
             </form>
     </div>
 

@@ -29,6 +29,10 @@
     {* remettre la class connexion, enlevé car formulaire blanc lors du clic *}
     <div class="connexion">
         <h2 style="margin-bottom: 30px" class="big_font">CONNEXION</h2>
+        {* Condition qui s'active pour confirmer l'inscription d'un nouveau membre *}
+        {if isset($success)}
+            <div class="alert-success">{$success}</div>
+        {/if}
         <form action="" method="post">
             {if isset($erreur)}
             <div>{$erreur}</div>

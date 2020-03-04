@@ -69,7 +69,7 @@
                 <label class="form-font anton yellow">Commentaire</label>
                 <p>{$fiche->getCommentaire()}</p>
                 <br/>
-
+        {* Fromulaire pour commenter une fiche de suivi *}
                 <form action="" method="post">
                     <label>Conseil - Alimentation</label><br/>
                     <textarea type="text" name="alimentation_coach" id="alimentation_coach"></textarea><br/>
@@ -78,10 +78,6 @@
                     <label>Conseil - Divers</label><br/>
                     <textarea type="text" name="commentaire_coach" id="commentaire_coach"></textarea><br/>
                     <button type="submit" name="coach_review" class="btn btn-primary">Soumettre le compte-rendu</button>
-
-                    {if isset($success)}
-                        <p>{$success}</p>
-                    {/if}
                 </form>
 
             </div>

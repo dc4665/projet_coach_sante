@@ -31,7 +31,7 @@
                         <div class="col-12 col-md-6 ml-auto mr-auto">
                             <form action="" method="post"><br>
                                 {if isset($alert)}
-                                    <div>{$alert}</div>
+                                    <div class="alert-warning">{$alert}</div>
                                 {/if}
 
                                 {* Parti pour que la personne puisse choisir son sexe *}

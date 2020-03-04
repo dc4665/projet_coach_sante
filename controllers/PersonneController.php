@@ -12,6 +12,17 @@ if($_SESSION['utilisateur']->getId_role() == 3){
         'utilisateur' => $_SESSION['utilisateur']
     ));
 
+    //Condition qui vérifie qu'une nouvelle fiche de suivi a été envoyée
+    if(isset($_GET['confirmation'])){
+
+        $smarty->assign('success', 'Une nouvelle de suivi a bien été envoyée! Nos coachs vous feront un retour le plus rapidement possible!');
+    }
+
+    if(isset($_GET['modification'])){
+        
+        $smarty->assign('modification', 'Vos informations ont bien été mises à jour! Elles seront effectives lors de votre prochaine connexion.');
+    }
+
     //Appel de personne.tpl
     $smarty->display('template/personne.tpl');
 
@@ -28,6 +39,12 @@ elseif($_SESSION['utilisateur']->getId_role() == 2 OR 1) {
         'utilisateur' => $_SESSION['utilisateur'],
         'fiches' => $fiches
     ));
+
+    //Dans cette condition on vérifie si fiche de suivi a été soumise ou pas
+    if(isset($_GET['confirmation'])){
+
+        $smarty->assign('success','La fiche de suivi a bien été commentée!');
+    }
 
     $smarty->display('template/personne.tpl');
 

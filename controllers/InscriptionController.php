@@ -23,8 +23,8 @@ if(isset($_POST['inscription'])){
 
     } else {
         $utilisateur->ajouterPersonne($nom, $prenom, $tel, $email, $password, $date_naissance, $sexe, $taille);
-        var_dump($utilisateur);
-        $smarty->assign('success', 'Bienvenu sur Coach Santé! Vous pouvez à présent vous connecter!');
+
+        echo('<script>document.location.href="http://localhost/projet_coach_sante/?action=connexion&confirmation=ok"</script>');
     }
 }
 

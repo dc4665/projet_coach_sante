@@ -16,7 +16,7 @@ if(isset($_SESSION['utilisateur'])){
         $utilisateur = new Personne();
         $utilisateur = $utilisateur->updatePersonne($nom, $prenom, $tel, $email, $password, $id_personne);
         
-        $smarty->assign('success','Vos informations personnelles ont bien été modifiées.');
+        echo('<script>document.location.href="http://localhost/projet_coach_sante/?action=personne&modification=ok"</script>');
     }
 }
 
