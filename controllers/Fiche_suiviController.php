@@ -50,9 +50,8 @@ if(isset($_POST['coach_review'])){
     //Création d'un objet de class Commentaire vide pour utiliser sa méthode d'ajout le commentaire dans la BDD
     $commentaires = new Commentaire();
     $result = $commentaires->addCommentaire($alimentation_coach, $activite_coach, $commentaire_coach, $id_personne, $id_fiche);
-    var_dump($result);
-
-    $smarty->assign('success', 'La fiche de suivi a bien été commenté!');
+    
+    echo('<script>document.location.href="http://localhost/projet_coach_sante/?action=personne&confirmation=ok"</script>');
 
 }
 

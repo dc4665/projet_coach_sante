@@ -28,7 +28,17 @@
     </div>
     <div class="connexion form_font anton">
         <div class="col-12 col-md-6 ml-auto mr-auto"> 
-            <h2 class="yellow">BIENVENUE DANS VOTRE ESPACE {$utilisateur->getPrenom()}</h2><br>
+            <h2 class="yellow">Bienvenu dans votre espace personnel: {$utilisateur->getPrenom()}</h2><br>
+            {* Condition qui s'active après l'envoie d'une fiche de suivi *}
+            {if isset($success)}
+                <div class="alert-success">{$success}</div>
+            {/if}
+
+            {* Condition qui s'active après la mise à jour des infos personnelle *}
+            {if isset($modification)}
+                <div class="alert-success">{$modification}</div>
+            {/if}
+            
             <a href="{$link->getPage('espace_perso')}">Accéder à mon espace personnel</a>
             <p class="medium_font"><img id="clipboard" class="img-fluid" src="img/fiche_suivi.png" alt="clipboard icon"><em><strong>Mes Fiches</strong></em></p>
             {foreach from=$fiches item=fiche}
@@ -54,7 +64,9 @@
         <div class="container">
             <h2>Hello Coach: {$utilisateur->getNom()}</h2>
             <p>Voici toutes les fiches en attentes</p>
-
+            {if isset($success)}
+                {$success}
+            {/if}
             {foreach from=$fiches item=fiche}
                 <div class="card">
                     <p>{$fiche.nom} {$fiche.prenom}</p>

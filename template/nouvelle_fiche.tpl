@@ -43,9 +43,6 @@
 
                 <button type="submit" name="nouvelle_fiche" class="btn anton bg_yel_oni btn-lg">ENVOYER</button> 
 
-                {if isset($success)}
-                    <div>{$success}</div>
-                {/if}
             </form>  
     </div>     
 {/block}

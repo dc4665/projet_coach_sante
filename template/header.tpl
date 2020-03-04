@@ -34,6 +34,7 @@
                 <div class="row align-justify">
                     {if empty($utilisateur)}
                     <a class="btn btn-primary anton mb-1" href="{$link->getPage('connexion')}" style="margin: auto">ESPACE CLIENT</a>
+                    <a class="btn btn-primary anton mb-1" href="{$link->getPage('inscription')}" style="margin: auto">INSCRIPTION</a>
                     {/if}
                     {* Vérifie la présence d'une session *}
                     {if isset($utilisateur)}

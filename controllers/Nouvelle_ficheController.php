@@ -17,8 +17,8 @@ if(isset($_SESSION['utilisateur'])){
         //On instancie un nouvelle objet de la class Fiche pour utiliser une méthode
         $fiche = new Fiche_suivi();
         $fiche->ajouterFiche($date, $poids, $alimentation, $activite, $commentaire, $actif, $id_personne);
-
-        $smarty->assign('success', 'Une nouvelle fiche a bien été ajoutée, nos coachs l\'examinerons le plus rapidement possible!');
+        
+        echo('<script>document.location.href="http://localhost/projet_coach_sante/?action=personne&confirmation=ok"</script>');
     }
     
 }
