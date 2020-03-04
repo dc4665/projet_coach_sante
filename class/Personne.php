@@ -8,6 +8,8 @@ class Personne extends Objet {
     private $_prenom;
     private $_tel;
     private $_email;
+    private $_taille;
+    private $_date_naissance;
     private $_password;
     private $_id_role;
 
@@ -31,6 +33,14 @@ class Personne extends Objet {
 
     public function getEmail(){
         return $this->_email;
+    }
+
+    public function getTaille(){
+        return $this->_taille;
+    }
+
+    public function getDate_naissance(){
+        return $this->_date_naissance;
     }
 
     public function getPassword(){
@@ -60,6 +70,14 @@ class Personne extends Objet {
 
     public function setEmail($email){
         $this->_email = $email;
+    }
+
+    public function setTaille($taille){
+        $this->_taille = $taille;
+    }
+
+    public function setDate_naissance($date_naissance){
+        $this->_date_naissance = $date_naissance;
     }
 
     public function setPassword($password){
@@ -96,6 +114,25 @@ class Personne extends Objet {
 
     }
 
+    //Méthode pour mettre à jour les informations de l'utilisateur
+    public function updatePersonne($nom, $prenom, $tel, $email, $password, $id_personne){
+
+        $sql = $GLOBALS['bdd']->prepare('UPDATE personne SET nom = :nom, prenom = :prenom, tel = :tel, email = :email, password = :password WHERE id_personne = ' .$id_personne);
+
+        $sql->bindValue(':nom', $nom);
+        $sql->bindValue(':prenom', $prenom);
+        $sql->bindValue(':tel', $tel);
+        $sql->bindValue(':email', $email);
+        $sql->bindValue(':password', password_hash($password, PASSWORD_DEFAULT));
+
+        $result = $sql->execute();
+
+        if($result === FALSE){
+            return 'Une erreur est survenue lors de l\'update'; 
+        }
+
+    }
+
 
     //Fonction pour vérifier que l'email entré par l'utilisateur est bon lors de la connexion
     public function getUserByEmail($email){
@@ -118,6 +155,16 @@ class Personne extends Objet {
         $this->hydrate($utilisateur);
 
         return $this; 
+    }
+
+    //fonction pour récupérer le nom d'un coach selon l'id d'une fiche de suivi
+    public function getPrenomCoach($id_fiche){
+
+        $sql = $GLOBALS['bdd']->query('SELECT prenom FROM personne INNER JOIN commentaire ON personne.id_personne = commentaire.id_personne WHERE commentaire.id_fiche =' .$id_fiche);
+
+        $sql = $sql->fetchColumn();
+
+        return $sql;
     }
 
 }

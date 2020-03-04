@@ -43,18 +43,29 @@
     {/block}
 
 {* Si l'utilisateur connecté est Coach *}
-{elseif $utilisateur->getId_role() == 2}
+{elseif $utilisateur->getId_role() == 2 OR 1}
     {block name="content"}
         <div style="margin-top: 200px"></div> 
         <div class="container">
             <h2>Hello Coach: {$utilisateur->getNom()}</h2>
+            <p>Voici toutes les fiches en attentes</p>
+
+            {foreach from=$fiches item=fiche}
+                <div class="card">
+                    <p>{$fiche.nom} {$fiche.prenom}</p>
+                    <p>{$fiche.date_fiche}</p>
+                    <a href="{$link->getFiche($fiche.id_fiche)}">Consulter la fiche de suivi</a>
+                </div>
+            {/foreach}
                     
         </div>
 
     {/block}
 
+{/if}
+
 {* Si l'utilisateur connecté est Administrateur *}
-{elseif $utilisateur->getId_role() == 1}
+{* {elseif $utilisateur->getId_role() == 1}
     {block name="content"}
         <div style="margin-top: 200px"></div> 
         <div class="container">
@@ -63,5 +74,5 @@
         </div>
         
     {/block}
-{/if}
+{/if} *}
 
