@@ -54,7 +54,7 @@ p
 
 .medium_font
 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .big_font
@@ -64,7 +64,7 @@ p
 
 .form_font
 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
 }
 
 .uppercase
@@ -367,11 +367,11 @@ nav a:hover
 .connexion select
 {
     text-align: center;
-    outline: none;
+    /*outline: none;
     border: none;
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
-    height: 45px;
+    height: 45px;*/
 }
 /*Fiche de suivi côté client*/
 #clipboard

@@ -33,13 +33,13 @@
             <div class="container text-center">
                 <div class="row align-justify">
                     {if empty($utilisateur)}
-                    <a class="btn btn-primary anton mb-1" href="{$link->getPage('connexion')}" style="margin: auto">ESPACE CLIENT</a>
+                    <a class="btn yellow bg_black anton mb-1" href="{$link->getPage('connexion')}" style="margin: auto">ESPACE CLIENT</a>
                     {/if}
                     {* Vérifie la présence d'une session *}
                     {if isset($utilisateur)}
                         <span class="col anton">{$utilisateur->getPrenom()}</span>
-                        <a href="{$link->getPage('personne')}" class="col btn">Tableau de bord</a>
-                        <a href="?action=connexion&session=out" class="col btn button mb-1">Deconnexion</a>
+                        <a href="{$link->getPage('personne')}" class="col anton btn">TABLEAU DE BORD</a>
+                        <a href="?action=connexion&session=out" class="col anton btn button mb-1">DECONNEXION</a>
                     {/if}
                 </div>
             </div>

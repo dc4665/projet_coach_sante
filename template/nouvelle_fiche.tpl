@@ -24,24 +24,25 @@
     </div>
 
     <div class="connexion">
-        <h2 class="">VOTRE FICHE DE SUIVI DE LA SEMAINE</h2>
+        <h2 class="medium_font">VOTRE FICHE DE SUIVI DE LA SEMAINE</h2>
+            <br>
             <form action="" method="post">
-                <label>Poids (en kg)</label>
-                <input type="number" name="poids" id="poids" required /><br/>
+                <label style="color: grey" class="form-font anton">Poids (en kg)</label>
+                <input type="number" class="col-4 col-md-4 ml-auto mr-auto form-control" name="poids" id="poids" required /><br/>
 
-                <label>Date</label>
-                <input type="date" name="date" id="date" required /><br/>
+                <label style="color: grey" class="form-font anton">Date de la fiche</label>
+                <input type="date" class="col-4 col-md-4 ml-auto mr-auto form-control" name="date" id="date" required /><br/>
 
-                <label>Alimentation</label>
-                <textarea type="text" name="alimentation" id="alimentation" required/></textarea><br/>
+                <label style="color: grey" class="form-font anton">Alimentation (Saisissez vos repas de la semaine)</label>
+                <textarea type="text" class="col-4 col-md-4 ml-auto mr-auto form-control" name="alimentation" id="alimentation" required/></textarea><br/>
 
-                <label>Activité</label> 
-                <textarea type="text" name="activite" id="activite" required/></textarea><br/>
+                <label style="color: grey" class="form-font anton">Activités de la semaine <br> (Indiquez les exercices et la durée de vos entrainements)</label> 
+                <textarea type="text" class="col-4 col-md-4 ml-auto mr-auto form-control" name="activite" id="activite" required/></textarea><br/>
 
-                <label>Commentaire</label>
-                <textarea type="text" name="commentaire" id="commentaire" ></textarea><br/>
+                <label style="color: grey" class="form-font anton">Commentaire</label>
+                <textarea type="text" class="col-4 col-md-4 ml-auto mr-auto form-control" name="commentaire" id="commentaire" ></textarea><br/>
 
-                <button type="submit" name="nouvelle_fiche" class="btn anton bg_yel_oni btn-lg">ENVOYER</button> 
+                <button type="submit" name="nouvelle_fiche" class="col-4 col-md-4 ml-auto mr-auto btn anton bg_yel_oni btn-block">ENVOYER</button> 
 
                 {if isset($success)}
                     <div>{$success}</div>

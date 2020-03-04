@@ -26,7 +26,7 @@
     </div>
     {* Formulaire d'inscription *}
             <div style="margin-top: 50px" class="container form_font anton">
-                <h2 style="text-align: center" class="big_font">INSCRIPTION</h2>
+                <h2 style="text-align: center" class="medium_font">INSCRIPTION</h2>
                     <div class="row">
                         <div class="col-12 col-md-6 ml-auto mr-auto">
                             <form action="" method="post"><br>
@@ -35,7 +35,7 @@
                                 {/if}
 
                                 {* Parti pour que la personne puisse choisir son sexe *}
-                                <p class="medium_font anton">VOUS ÊTES : </p>     
+                                <p class="form_font anton">VOUS ÊTES : </p>     
                                 <input type="radio" name="sexe" id="homme" value="homme">
                                 <label for="homme">Homme</label>      
                                 <input type="radio" name="sexe" id="femme" value="femme"> 
