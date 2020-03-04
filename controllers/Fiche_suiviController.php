@@ -42,9 +42,9 @@ if(isset($_SESSION['utilisateur'])){
 
 //Récupération de la review du coach sur la fiche de suivi. Cette secion du code ne sert que si l'utilisateur est Coach ou Administrateur. 
 if(isset($_POST['coach_review'])){
-    $alimentation_coach = $_POST['alimentation_coach'];
-    $activite_coach = $_POST['activite_coach'];
-    $commentaire_coach = $_POST['commentaire_coach'];
+    $alimentation_coach = nl2br($_POST['alimentation_coach']);
+    $activite_coach = nl2br($_POST['activite_coach']);
+    $commentaire_coach = nl2br($_POST['commentaire_coach']);
     $id_personne = $_SESSION['utilisateur']->getId_personne();
 
     //Création d'un objet de class Commentaire vide pour utiliser sa méthode d'ajout le commentaire dans la BDD

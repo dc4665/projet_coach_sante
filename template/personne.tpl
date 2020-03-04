@@ -38,8 +38,11 @@
             {if isset($modification)}
                 <div class="alert-success">{$modification}</div>
             {/if}
-            
-            <a href="{$link->getPage('espace_perso')}">Accéder à mon espace personnel</a>
+            <div>
+                <a href="{$link->getPage('espace_perso')}"><i class="fas fa-cog"></i></a>
+                <p>Modifier mes Informations</p>
+            </div>
+
             <p class="medium_font"><img id="clipboard" class="img-fluid" src="img/fiche_suivi.png" alt="clipboard icon"><em><strong>Mes Fiches</strong></em></p>
             {foreach from=$fiches item=fiche}
                 <a class="fiche_suivi" href="{$link->getFiche($fiche->getId_fiche())}">Fiche du {$fiche->getDate_fiche()}</a><br>
@@ -58,11 +61,34 @@
     {/block}
 
 {* Si l'utilisateur connecté est Coach *}
-{elseif $utilisateur->getId_role() == 2 OR 1}
+{elseif $utilisateur->getId_role() == 2}
     {block name="content"}
         <div style="margin-top: 200px"></div> 
         <div class="container">
             <h2>Hello Coach: {$utilisateur->getNom()}</h2>
+            <p>Voici toutes les fiches en attentes</p>
+            {if isset($success)}
+                {$success}
+            {/if}
+            {foreach from=$fiches item=fiche}
+                <div class="card">
+                    <p>{$fiche.nom} {$fiche.prenom}</p>
+                    <p>{$fiche.date_fiche}</p>
+                    <a href="{$link->getFiche($fiche.id_fiche)}">Consulter la fiche de suivi</a>
+                </div>
+            {/foreach}
+                    
+        </div>
+
+    {/block}
+
+{* Si l'utilisateur est administrateur *}
+{elseif $utilisateur->getId_role() == 1}
+    {block name="content"}
+        <div style="margin-top: 200px"></div> 
+        <div class="container">
+            <h2>Hello Coach: {$utilisateur->getNom()}</h2>
+            <a href="{$link->getPage('admin_manager')}">Accéder à la zone d'administration</a>
             <p>Voici toutes les fiches en attentes</p>
             {if isset($success)}
                 {$success}

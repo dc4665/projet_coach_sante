@@ -20,7 +20,7 @@ if($_SESSION['utilisateur']->getId_role() == 3){
 
     if(isset($_GET['modification'])){
         
-        $smarty->assign('modification', 'Vos informations ont bien été mises à jour! Elles seront effectives lors de votre prochaine connexion.');
+        $smarty->assign('modification', 'Vos informations ont bien été mises à jour!');
     }
 
     //Appel de personne.tpl
@@ -29,7 +29,7 @@ if($_SESSION['utilisateur']->getId_role() == 3){
 } 
 
 //Si la personne connectée est Coach
-elseif($_SESSION['utilisateur']->getId_role() == 2 OR 1) {
+elseif($_SESSION['utilisateur']->getId_role() == 2) {
 
     //On récupère toutes les fiches de suivi qui ont une valeur "actif" de 0. 0 voulant dire que la fiche n'a ppas encore été commentée par un coach
     $fiches = new Fiche_suivi();
@@ -48,17 +48,25 @@ elseif($_SESSION['utilisateur']->getId_role() == 2 OR 1) {
 
     $smarty->display('template/personne.tpl');
 
-} 
+} elseif($_SESSION['utilisateur']->getId_role() == 1) {
 
-//Si la personne connecté est Coach et Administrateur
-/* elseif($_SESSION['utilisateur']->getId_role() == 1) {
 
+    $fiches = new Fiche_suivi();
+    $fiches = $fiches->getAllFichesAttentes();
+   
     $smarty->assign(array(
-        'utilisateur' => $_SESSION['utilisateur']
+        'utilisateur' => $_SESSION['utilisateur'],
+        'fiches' => $fiches
     ));
 
+    //Dans cette condition on vérifie si fiche de suivi a été soumise ou pas
+    if(isset($_GET['confirmation'])){
+
+        $smarty->assign('success','La fiche de suivi a bien été commentée!');
+    }
+
     $smarty->display('template/personne.tpl');
-} */
+} 
 
 
 

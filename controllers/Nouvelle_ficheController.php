@@ -8,9 +8,9 @@ if(isset($_SESSION['utilisateur'])){
         
         $date = ($_POST['date']);
         $poids = ($_POST['poids']);
-        $alimentation = ($_POST['alimentation']);
-        $activite = ($_POST['activite']);
-        $commentaire = ($_POST['commentaire']);
+        $alimentation = nl2br(($_POST['alimentation']));
+        $activite = nl2br(($_POST['activite']));
+        $commentaire = nl2br(($_POST['commentaire']));
         $actif = 0;
         $id_personne = ($_SESSION['utilisateur']->getId_personne());
         

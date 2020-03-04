@@ -110,6 +110,26 @@ class Personne extends Objet {
 
        if($result === FALSE){
            return 'Une erreur s\'est produite. Contactez-nous pour en savoir plus';
+       } else {
+            //Envoie un email au moment de l'inscription de la personne
+
+            $mail = new Mail([
+                
+                'to' => $email,
+                'subject' => 'Bienvenu sur Coach Santé!',
+                'template' => 'bienvenu'
+
+            ]);
+
+            //Création du tableau de variable pour personnaliser le template
+            $data = [
+                'nom' => $nom,
+                'prenom' => $prenom,
+                'email' => $email
+            ];
+
+            $mail->send($data);
+
        }
 
     }
@@ -126,6 +146,12 @@ class Personne extends Objet {
         $sql->bindValue(':password', password_hash($password, PASSWORD_DEFAULT));
 
         $result = $sql->execute();
+
+        $_SESSION['utilisateur']->setNom($nom);
+        $_SESSION['utilisateur']->setPrenom($prenom);
+        $_SESSION['utilisateur']->setTel($tel);
+        $_SESSION['utilisateur']->setEmail($email);
+    
 
         if($result === FALSE){
             return 'Une erreur est survenue lors de l\'update'; 
