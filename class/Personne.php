@@ -147,6 +147,7 @@ class Personne extends Objet {
 
         $result = $sql->execute();
 
+        //On réaffecte les nouvelles valeures dans la session actuelle pour que l'utilisateur puisse voir ses informations immédiatement.
         $_SESSION['utilisateur']->setNom($nom);
         $_SESSION['utilisateur']->setPrenom($prenom);
         $_SESSION['utilisateur']->setTel($tel);
@@ -192,5 +193,32 @@ class Personne extends Objet {
 
         return $sql;
     }
+
+    //fonction pour récupérer TOUTES les informations de TOUS les utilisateurs du site ainsi que le nom de leur ROLE qui se trouve sur une autre table. Le résultat retourné est un array.  
+    public function getAllPersonnes(){
+
+        $personnes = [];
+        
+        $sql = $GLOBALS['bdd']->query('SELECT * FROM personne p INNER JOIN role r ON p.id_role = r.id_role');
+
+        while($donnees = $sql->fetch()){
+
+            $personnes[] = $donnees;
+        }
+
+        return $personnes;
+    }
+
+    //fonction utilisée pour récupérer toutes les informations d'une personne. Seulement utilisé par l'administrateur.
+    public function getPersonne($id_personne){
+
+        $sql = $GLOBALS['bdd']->query('SELECT * FROM personne WHERE id_personne =' .$id_personne);
+
+        $sql = $sql->fetch();
+
+        $this->hydrate($sql);
+
+        return $this;
+    } 
 
 }

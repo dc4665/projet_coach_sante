@@ -25,4 +25,19 @@ class Role extends Objet {
         $this->_nom_role = $nom_role;
     }
 
+    //Fonction pour récupérer toutes les informations concernant les roles et retourner un tableau contenant des objets de roles.
+    public function getRoles(){
+
+        $roles = [];
+        
+        $sql = $GLOBALS['bdd']->query('SELECT * FROM role');
+
+        while($donnees = $sql->fetch(PDO::FETCH_ASSOC)){
+
+            $roles[] = new Role($donnees);
+        }
+
+        return $roles;
+   
+    }
 }
