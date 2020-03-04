@@ -19,6 +19,7 @@ if($_SESSION['utilisateur']->getId_role() == 1){
     ));
 }
 
+//Récupération des modifications faites par l'administrateur
 if(isset($_POST['modification'])){
     
     $nom = $_POST['nom'];
@@ -28,6 +29,12 @@ if(isset($_POST['modification'])){
     $id_role = $_POST['role'];
     echo($id_role);
     $id_personne = $personne->getId_personne();
+
+    $personne = new Personne();
+    $personne = $personne->updatePersonneAdmin($nom, $prenom, $tel, $email, $id_role, $id_personne);
+
+    echo('<script>document.location.href="http://localhost/projet_coach_sante/?action=admin_manager&modification=ok"</script>'); 
+
 }
 
 //Récupérations des informations de l'utilisateur sélectionné dans Admin_manager.tpl

@@ -160,6 +160,28 @@ class Personne extends Objet {
 
     }
 
+    //Fonction utilisée par l'administrateur pour modifier les informations d'un utilisateur et et son rang (mais pas son password).
+    public function updatePersonneAdmin($nom, $prenom, $tel, $email, $id_role, $id_personne){
+
+        $sql = $GLOBALS['bdd']->prepare('UPDATE personne SET nom = :nom, prenom = :prenom, tel = :tel, email = :email, id_role = :id_role WHERE id_personne = ' .$id_personne);
+
+        $sql->bindValue('nom', $nom);
+        $sql->bindValue('prenom', $prenom);
+        $sql->bindValue('tel', $tel);
+        $sql->bindValue('email', $email);
+        $sql->bindValue('id_role', $id_role);
+
+        $result = $sql->execute();
+
+        if($result === FALSE){
+            return 'Une erreur est survenue lors de l\'update'; 
+        }
+
+    }
+
+    //Fonction utilisée pour supprimer un utilisateur définitivement. L'administrateur ne peut pas se supprimer lui-même cependant. 
+    
+
 
     //Fonction pour vérifier que l'email entré par l'utilisateur est bon lors de la connexion
     public function getUserByEmail($email){
