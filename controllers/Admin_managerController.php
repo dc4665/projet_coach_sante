@@ -14,5 +14,10 @@ if($_SESSION['utilisateur']->getId_role() == 1){
     
 }
 
+if(isset($_GET)){
+
+    $smarty->assign('success', 'L\'utilisateur a bien été mise à jour!');
+}
+
 
 $smarty->display('template/admin_manager.tpl');

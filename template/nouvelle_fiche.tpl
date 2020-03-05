@@ -14,7 +14,7 @@
                         <h1 class="white big_font mt-5">ESPACE CLIENT</h1>
 
                     </div>
-                    <div class="offset-md-3 col-12 col-md-6 text-left mt-5">
+                    <div class="offset-md-3 col-12 col-md-6 text-justify mt-5">
                         <p class="white">
                             Postez vos fiches de suivi, et suivez les recommandations de votre Coach Santé dans votre espace personnel
                         </p>

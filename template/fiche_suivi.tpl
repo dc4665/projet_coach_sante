@@ -14,7 +14,7 @@
                         <h1 class="white big_font mt-5">ESPACE CLIENT</h1>
 
                     </div>
-                    <div class="offset-md-3 col-12 col-md-6 text-left mt-5">
+                    <div class="offset-md-3 col-12 col-md-6 text-justify mt-5">
                         <p class="white">
                             Postez vos fiches de suivi, et suivez les recommandations de votre Coach Santé dans votre espace personnel
                         </p>
@@ -29,36 +29,45 @@
     {if isset($utilisateur)}
         {* page affichée si l'utilisateur est membre *}
         {if $utilisateur->getId_role() == 3}
-            <div style="margin-top: 50px">
-                <div class="connexion">
-                    <h2 class="medium_font yellow">Résumé de votre fiche du: {$fiche->getDate_fiche()}</h2>
-                    <br>
-                    <label style="" class="form-font anton">Alimentation (Saisissez vos repas de la semaine)</label>
-                    <p>{$fiche->getAlimentation()}</p>
-                    <label style="" class="form-font anton">Activités de la semaine <br> (Indiquez les exercices et la durée de vos entrainements)</label>
-                    <p>{$fiche->getActivite()}</p>
-                    <label style="" class="form-font anton">Commentaire</label>
-                    <p>{$fiche->getCommentaire()}</p>
-                        <a style="margin-bottom: 50px" href="{$link->getPage('personne')}" class="col-3 col-md-3 ml-auto mr-auto btn anton yellow bg_black btn-lg">RETOUR</a>
-                </div>
-
-            {* Block qui s'affiche si un coach a laissé des commentaires sur la fiche *}
-            {if isset($commentaires)}
-            <div class="container">
-                <h2>Les commentaires de Coach : {$coach}</h2>
-                {foreach from=$commentaires item=donnee}
-                    <div>
-                        <p>{$donnee.alimentation_coach}</p>
-                        <p>{$donnee.activite_coach}</p>
-                        <p>{$donnee.commentaire_coach}</p>
+            <div style="margin-top: 20px">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-md-6 ml-auto mr-auto">
+                            <h2 class="text-center medium_font yellow">Résumé de votre fiche du: {$fiche->getDate_fiche()}</h2>
+                            <br>
+                            <label style="" class="form-font anton">Alimentation (Saisissez vos repas de la semaine)</label>
+                            <p>{$fiche->getAlimentation()}</p>
+                            <label style="" class="form-font anton">Activités de la semaine <br> (Indiquez les exercices et la durée de vos entrainements)</label>
+                            <p>{$fiche->getActivite()}</p>
+                            <label style="" class="form-font anton">Commentaire</label>
+                            <p>{$fiche->getCommentaire()}</p>
+                        </div>
+                            
+                    {* Block qui s'affiche si un coach a laissé des commentaires sur la fiche *}
+                        <div style="margin-top: 120px" class="col-6 col-md-6 ml-auto mr-auto">
+                            {if isset($commentaires)}
+                            <div class="container">
+                                <h2>Les conseils de Coach : {$coach}</h2>
+                                {foreach from=$commentaires item=donnee}
+                                    <div>
+                                        <label class="form-font anton">Sur l'alimentation</label>
+                                        <p>{$donnee.alimentation_coach}</p>
+                                        <label style="" class="form-font anton">Sur votre activité physique</label>
+                                        <p>{$donnee.activite_coach}</p>
+                                        <label style="" class="form-font anton">Autre(s) recommandation(s)</label>
+                                        <p>{$donnee.commentaire_coach}</p>
+                                    </div>
+                                {/foreach}
+                            </div>
+                            {/if}
+                        </div>        
                     </div>
-                {/foreach}
-            </div>
-            {/if}
+                        <a style="margin-bottom: 20px" href="{$link->getPage('personne')}" class="col-3 col-md-3 ml-auto mr-auto btn anton yellow bg_black btn-lg">RETOUR</a>
+                </div>
 
         {* page affichée si l'utilisateur est coach *}
         {elseif $utilisateur->getId_role() == 2 OR 1}
-            <div style="margin-top: 50px"></div>
+            <div style="margin-top: 20px"></div>
             <div class="connexion">
                 <h2>Fiche de suivi du: {$fiche->getDate_fiche()}</h2>
                 <label class="form-font anton yellow">Alimentation</label>

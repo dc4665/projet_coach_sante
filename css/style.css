@@ -219,6 +219,17 @@ p
     left: 0;
 }
 
+#bg_admin
+{
+    position: absolute;
+    background-image:url(../img/admin.jpg);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
 @media screen and (max-width: 1440px)
 {
     #bg_programme

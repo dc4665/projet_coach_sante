@@ -19,6 +19,7 @@ if($_SESSION['utilisateur']->getId_role() == 1){
     ));
 }
 
+//Récupération des modifications faites par l'administrateur
 if(isset($_POST['modification'])){
     
     $nom = $_POST['nom'];
