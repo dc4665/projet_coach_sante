@@ -134,7 +134,7 @@ class Personne extends Objet {
 
     }
 
-    //Méthode pour mettre à jour les informations de l'utilisateur
+    //Méthode pour mettre à jour les informations de l'utilisateur. Utilisé par les membres / clients.
     public function updatePersonne($nom, $prenom, $tel, $email, $password, $id_personne){
 
         $sql = $GLOBALS['bdd']->prepare('UPDATE personne SET nom = :nom, prenom = :prenom, tel = :tel, email = :email, password = :password WHERE id_personne = ' .$id_personne);
@@ -158,6 +158,19 @@ class Personne extends Objet {
             return 'Une erreur est survenue lors de l\'update'; 
         }
 
+    }
+
+    public function updatePersonneAdmin($nom, $prenom, $tel, $email, $id_role, $id_personne){
+
+        $sql = $GLOBALS['bdd']->prepare('UPDATE personne SET nom = :nom, prenom = :prenom, tel = :tel, email = :email, id_role = :id_role WHERE id_personne =' .$id_personne);
+
+        $sql->bindValue(':nom', $nom);
+        $sql->bindValue(':prenom', $prenom);
+        $sql->bindValue(':tel', $tel);
+        $sql->bindValue(':email', $email);
+        $sql->bindValue(':id_role', $id_role);
+
+        $result = $sql->execute();
     }
 
 

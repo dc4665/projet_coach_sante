@@ -28,6 +28,12 @@ if(isset($_POST['modification'])){
     $id_role = $_POST['role'];
     echo($id_role);
     $id_personne = $personne->getId_personne();
+
+    $modification = new Personne();
+    $modification = $modification->updatePersonneAdmin($nom, $prenom, $tel, $email, $id_role, $id_personne);
+
+    $smarty->assign('success', 'Le membre a bien été modifié !');
+    
 }
 
 //Récupérations des informations de l'utilisateur sélectionné dans Admin_manager.tpl

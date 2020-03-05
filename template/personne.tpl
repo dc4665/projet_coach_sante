@@ -88,6 +88,7 @@
         <div style="margin-top: 50px"></div> 
         <div class="container">
             <h2 style="text-align: center">Hello Coach {$utilisateur->getNom()}</h2>
+            <div><a href="{$link->getPage('recherche')}">Rechercher un membre</a></div>
             <p style="text-align: center"><em>Voici toutes les fiches en attentes</em></p>
             {if isset($success)}
                 {$success}
