@@ -41,9 +41,6 @@
                 <label>Téléphone</label>
                 <input type="tel" name="tel" id="tel" value="{$utilisateur->getTel()}" required /><br/>
 
-                <label>Mot de passe</label>
-                <input type="password" name="password" id="password" value="" required /><br/>
-
                 <button type="submit" name="modification" class="btn anton bg_yel_oni">Valider les changements</button>
 
             </form>
