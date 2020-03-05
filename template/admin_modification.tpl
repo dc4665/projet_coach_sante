@@ -1,8 +1,31 @@
 {extends file="template/layout.tpl"}
 
 {block name="content"}
+<div class="bandeau">
+            <div id="bg_admin">
 
-    <div style="margin-top: 200px"></div> 
+            </div>
+                <div class="bg_opacity">
+                </div>
+
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 mt-5">
+                        <h1 class="white big_font mt-5">ZONE ADMINISTRATEUR</h1>
+
+                    </div>
+                    <div class="offset-md-3 col-12 col-md-6 text-justify mt-5">
+                        <p class="white">
+                            Bienvenu dans la zone d'administration.<br>
+                            Gérez vous même les autorisations d'accès des coachs et les comptes clients.<br>
+                            Vous pouvez également supprimer les accès coachs et les comptes clients.                         
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div style="margin-top: 20px"></div> 
 
     <div class="container">
         <h1>Vous pouvez changer les informations et le role de: <br/> {$personne->getNom()} {$personne->getPrenom()}</h1>
