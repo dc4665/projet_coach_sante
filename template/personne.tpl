@@ -57,7 +57,7 @@
                     {/if}
                     <div style="margin-bottom: 20px" class="row d-flex justify-content-center">
                         <a style="margin-right: 20px" class="btn anton yellow bg_black" href="{$link->getPage('espace_perso')}"><i style="padding-right: 10px" class="yellow fas fa-cog"></i>MODIFIER MES INFORMATIONS</a>
-                        <a style="margin-left: 20px href="{$link->getPage('nouvelle_fiche')}" class="btn anton bg_yel_oni btn-lg">SOUMETTRE UNE NOUVELLE FICHE</a>
+                        <a style="margin-left: 20px" href="{$link->getPage('nouvelle_fiche')}" class="btn anton bg_yel_oni btn-lg">SOUMETTRE UNE NOUVELLE FICHE</a>
                     </div>
                 </div>    
             </div>
