@@ -243,4 +243,29 @@ class Personne extends Objet {
         return $this;
     } 
 
+    //Fonction utilisé par l'administrateur pour supprimer un utilisateur
+    public function deletePersonne(int $id_personne){
+
+        //On doit d'abord supprimer tous les commentaires liés à une fiche de suivi. On prépare la requête. 
+        $commentaires = $GLOBALS['bdd']->query('SELECT * FROM fichesuivi WHERE id_personne =' .$id_personne);
+        $commentaires = $commentaires->fetchall();
+        //On efface tous les commentaires liés à une fiche de suivi
+        foreach($commentaires as $value){
+
+            $sql = $GLOBALS['bdd']->prepare('DELETE FROM commentaire WHERE id_fiche =' .$value['id_fiche']);
+            $result = $sql->execute();
+        }
+
+        //On supprime les fiches de suivi liées à l'utilisateur avant de pouvoir le supprimer. 
+        $sql = $GLOBALS['bdd']->prepare('DELETE FROM fichesuivi WHERE id_personne = '.$id_personne);
+        
+        $result = $sql->execute();
+
+        //On efface maintenant l'utilisateur
+        $sql = $GLOBALS['bdd']->prepare('DELETE FROM personne WHERE id_personne = '.$id_personne);
+
+        $result = $sql->execute(); 
+
+    }
+
 }
