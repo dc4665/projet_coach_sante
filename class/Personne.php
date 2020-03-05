@@ -134,16 +134,15 @@ class Personne extends Objet {
 
     }
 
-    //Méthode pour mettre à jour les informations de l'utilisateur
-    public function updatePersonne($nom, $prenom, $tel, $email, $password, $id_personne){
+    //Méthode pour mettre à jour les informations de l'utilisateur. Utilisé par les membres / clients.
+    public function updatePersonne($nom, $prenom, $tel, $email, $id_personne){
 
-        $sql = $GLOBALS['bdd']->prepare('UPDATE personne SET nom = :nom, prenom = :prenom, tel = :tel, email = :email, password = :password WHERE id_personne = ' .$id_personne);
+        $sql = $GLOBALS['bdd']->prepare('UPDATE personne SET nom = :nom, prenom = :prenom, tel = :tel, email = :email WHERE id_personne = ' .$id_personne);
 
         $sql->bindValue(':nom', $nom);
         $sql->bindValue(':prenom', $prenom);
         $sql->bindValue(':tel', $tel);
         $sql->bindValue(':email', $email);
-        $sql->bindValue(':password', password_hash($password, PASSWORD_DEFAULT));
 
         $result = $sql->execute();
 
@@ -159,6 +158,7 @@ class Personne extends Objet {
         }
 
     }
+
 
     //Fonction utilisée par l'administrateur pour modifier les informations d'un utilisateur et et son rang (mais pas son password).
     public function updatePersonneAdmin($nom, $prenom, $tel, $email, $id_role, $id_personne){

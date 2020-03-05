@@ -30,11 +30,11 @@ if(isset($_POST['modification'])){
     echo($id_role);
     $id_personne = $personne->getId_personne();
 
-    $personne = new Personne();
-    $personne = $personne->updatePersonneAdmin($nom, $prenom, $tel, $email, $id_role, $id_personne);
+    $modification = new Personne();
+    $modification = $modification->updatePersonneAdmin($nom, $prenom, $tel, $email, $id_role, $id_personne);
 
-    echo('<script>document.location.href="http://localhost/projet_coach_sante/?action=admin_manager&modification=ok"</script>'); 
-
+    $smarty->assign('success', 'Le membre a bien été modifié !');
+    
 }
 
 //Récupérations des informations de l'utilisateur sélectionné dans Admin_manager.tpl
