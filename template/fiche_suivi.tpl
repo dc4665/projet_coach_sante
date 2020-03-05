@@ -36,33 +36,35 @@
                             <h2 class="text-center medium_font yellow">Résumé de votre fiche du: {$fiche->getDate_fiche()}</h2>
                             <br>
                             <label style="" class="form-font anton">Alimentation (Saisissez vos repas de la semaine)</label>
-                            <p>{$fiche->getAlimentation()}</p>
-                            <label style="" class="form-font anton">Activités de la semaine <br> (Indiquez les exercices et la durée de vos entrainements)</label>
-                            <p>{$fiche->getActivite()}</p>
-                            <label style="" class="form-font anton">Commentaire</label>
-                            <p>{$fiche->getCommentaire()}</p>
+                            <p style="line-height: 160%">{$fiche->getAlimentation()}</p>
+                            <label class="form-font anton">Activités de la semaine <br> (Indiquez les exercices et la durée de vos entrainements)</label>
+                            <p style="line-height: 160%">{$fiche->getActivite()}</p>
+                            <label class="form-font anton">Commentaire</label>
+                            <p style="line-height: 160%">{$fiche->getCommentaire()}</p>
                         </div>
                             
                     {* Block qui s'affiche si un coach a laissé des commentaires sur la fiche *}
-                        <div style="margin-top: 120px" class="col-6 col-md-6 ml-auto mr-auto">
+                        <div style="margin-top: 125px" class="col-6 col-md-6 ml-auto mr-auto">
                             {if isset($commentaires)}
                             <div class="container">
                                 <h2>Les conseils de Coach : {$coach}</h2>
                                 {foreach from=$commentaires item=donnee}
                                     <div>
                                         <label class="form-font anton">Sur l'alimentation</label>
-                                        <p>{$donnee.alimentation_coach}</p>
-                                        <label style="" class="form-font anton">Sur votre activité physique</label>
-                                        <p>{$donnee.activite_coach}</p>
-                                        <label style="" class="form-font anton">Autre(s) recommandation(s)</label>
-                                        <p>{$donnee.commentaire_coach}</p>
+                                        <p style="line-height: 160%">{$donnee.alimentation_coach}</p>
+                                        <label style="margin-top: 100px" class="form-font anton">Sur votre activité physique</label>
+                                        <p style="line-height: 160%">{$donnee.activite_coach}</p>
+                                        <label style="margin-top: 100px" class="form-font anton">Autre(s) recommandation(s)</label>
+                                        <p style="line-height: 160%">{$donnee.commentaire_coach}</p>
                                     </div>
                                 {/foreach}
                             </div>
                             {/if}
                         </div>        
                     </div>
-                        <a style="margin-bottom: 20px" href="{$link->getPage('personne')}" class="col-3 col-md-3 ml-auto mr-auto btn anton yellow bg_black btn-lg">RETOUR</a>
+                <div style="margin-top: 25px" class="row d-flex justify-content-center">    
+                    <a style="margin-bottom: 20px" href="{$link->getPage('personne')}" class="col- col-md-4 ml-auto mr-auto btn anton yellow bg_black btn-lg">RETOUR</a>
+                </div>
                 </div>
 
         {* page affichée si l'utilisateur est coach *}

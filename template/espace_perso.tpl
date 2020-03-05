@@ -25,9 +25,9 @@
 
     <div style="margin-top: 20px"></div> 
     <div class="container">
-        <h1>Bienvenu sur votre espace personnel: {$utilisateur->getPrenom()}</h1>
-        <p><em>Vous pouvez changer vos informations et coordonnées personnelles</em></p>
-
+        <h1 class="text-center">Bienvenu sur votre espace personnel: {$utilisateur->getPrenom()}</h1>
+            <p class="text-center"><em>Vous pouvez changer vos informations et coordonnées personnelles</em></p>
+        
             <form action="" method="post">
                 <label>Nom</label>
                 <input type="text" name="nom" id="nom" value="{$utilisateur->getNom()}" required /><br/>
