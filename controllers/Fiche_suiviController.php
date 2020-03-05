@@ -1,8 +1,5 @@
 <?php
 
-//Ce fichier sera notre routeur
-include_once('include.php');
-
 //Récupération de l'id_fiche
 $id_fiche = $_GET['id_fiche'];
 
@@ -47,7 +44,7 @@ if(isset($_POST['coach_review'])){
     $commentaire_coach = nl2br($_POST['commentaire_coach']);
     $id_personne = $_SESSION['utilisateur']->getId_personne();
 
-    //Création d'un objet de class Commentaire vide pour utiliser sa méthode d'ajout le commentaire dans la BDD
+    //Création d'un objet de class Commentaire vide pour utiliser sa méthode d'ajout de commentaire dans la BDD
     $commentaires = new Commentaire();
     $result = $commentaires->addCommentaire($alimentation_coach, $activite_coach, $commentaire_coach, $id_personne, $id_fiche);
     

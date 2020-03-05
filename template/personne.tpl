@@ -94,8 +94,9 @@
             <h2 style="text-align: center">Hello Coach {$utilisateur->getNom()}</h2>
             <div><a href="{$link->getPage('recherche')}">Rechercher un membre</a></div>
             <p style="text-align: center"><em>Voici toutes les fiches en attentes</em></p>
+            {* Condition qui confirme qu'une fiche de suivi a bien été envoyée commentée *}
             {if isset($success)}
-                {$success}
+                <div class="alert alert-success">{$success}</div>
             {/if}
             {foreach from=$fiches item=fiche}
                 <div class="card">
@@ -146,7 +147,7 @@
 
                 <p style="text-align: center"><em>Voici toutes les fiches en attentes</em></p>
                 {if isset($success)}
-                    {$success}
+                    <div class="alert alert-success">{$success}</div>
                 {/if}
                 {foreach from=$fiches item=fiche}
                     <div class="card">

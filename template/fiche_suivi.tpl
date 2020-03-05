@@ -86,20 +86,20 @@
                             <p class="card-body">{$fiche->getCommentaire()}</p>
                         </div>    
                     </div>
-                    {* Fromulaire pour commenter une fiche de suivi *}
+                    {* Formulaire pour commenter une fiche de suivi *}
                     <div style="margin-top: 40px" class="col-12 col-md-6 ml-auto mr-auto">
                             <form action="" method="post">
                                 <label class="anton">Conseil - Alimentation</label>
                                 <br/>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" name="alimentation_coach" id="alimentation_coach" rows="3"></textarea>
                                 <br/>
-                                <label style="margin-top: 40px" class="anton">Conseil - Activité</label>
+                                <label style="margin-top: 40px"  class="anton">Conseil - Activité</label>
                                 <br/>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" name="activite_coach"  id="activite_coach" rows="3"></textarea>
                                 <br/>
                                 <label style="margin-top: 40px" class="anton">Conseil - Divers</label>
                                 <br/>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" name="commentaire_coach" id="commentaire_coach" rows="3"></textarea>
                                 <br/>
                                 <button type="submit" name="coach_review" class="btn anton bg_yel_oni">Soumettre le compte-rendu</button>
                             </form>
