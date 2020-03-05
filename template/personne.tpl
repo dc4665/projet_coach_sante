@@ -18,7 +18,7 @@
                         <h1 class="white big_font mt-5">ESPACE CLIENT</h1>
 
                     </div>
-                    <div class="offset-md-3 col-12 col-md-6 text-left mt-5">
+                    <div class="offset-md-3 col-12 col-md-6 text-justify mt-5">
                         <p class="white">
                             Postez vos fiches de suivi, et suivez les recommandations de votre Coach Santé dans votre espace personnel
                         </p>
@@ -26,22 +26,14 @@
                 </div>
             </div>
     </div>
-    <div style="margin-top: 50px" class="container form_font anton">
+    <div style="margin-top: 20px" class="container form_font anton">
         <div class="row">
             <div class="col-12 col-md-6 ml-auto mr-auto"> 
-                <h2 style="text-align: center" class="yellow">BIENVENU DANS VOTRE ESPACE PERSONNEL: {$utilisateur->getPrenom()}</h2><br>
+                <h2 style="text-align: center" class="yellow">BIENVENU DANS VOTRE ESPACE PERSONNEL: {$utilisateur->getPrenom()}</h2>
                 {* Condition qui s'active après l'envoie d'une fiche de suivi *}
                 {if isset($success)}
                     <div class="alert-success">{$success}</div>
                 {/if}
-
-                {* Condition qui s'active après la mise à jour des infos personnelle *}
-                {if isset($modification)}
-                    <div class="alert-success">{$modification}</div>
-                {/if}
-                <div>
-                    <a class="btn anton black bg_yel_oni" href="{$link->getPage('espace_perso')}"><i style="padding-right: 10px" class="black fas fa-cog"></i>MODIFIER MES INFORMATIONS</a>
-                </div>
 
                 <p class="medium_font"><img id="clipboard" class="img-fluid" src="img/fiche_suivi.png" alt="clipboard icon"><em><strong>Mes Fiches</strong></em></p>
                 {foreach from=$fiches item=fiche}
@@ -54,8 +46,16 @@
                     {/if}
                 {/foreach}
                 <br>
-
-                <div style="margin-bottom: 50px" class="connexion"><a href="{$link->getPage('nouvelle_fiche')}" class="btn anton bg_yel_oni btn-lg">SOUMETTRE UNE NOUVELLE FICHE</a></div>
+                <div class="row">
+                    {* Condition qui s'active après la mise à jour des infos personnelle *}
+                    {if isset($modification)}
+                        <div class="alert-success">{$modification}</div>
+                    {/if}
+                    <div class="">
+                        <a style="margin-right: 20px" class="btn anton yellow bg_black" href="{$link->getPage('espace_perso')}"><i style="padding-right: 10px" class="yellow fas fa-cog"></i>MODIFIER MES INFORMATIONS</a>
+                    </div>
+                    <div style="margin-bottom: 50px" class="connexion"><a href="{$link->getPage('nouvelle_fiche')}" class="btn anton bg_yel_oni btn-lg">SOUMETTRE UNE NOUVELLE FICHE</a></div>
+                </div>    
             </div>
         </div>    
     </div>
@@ -77,7 +77,7 @@
                         <h1 class="white big_font mt-5">ESPACE COACH</h1>
 
                     </div>
-                    <div class="offset-md-3 col-12 col-md-6 text-left mt-5">
+                    <div class="offset-md-3 col-12 col-md-6 text-justify mt-5">
                         <p class="white">
                             Dispensez vos conseils en matières de nutrition et d'exercice de musculation, pour que chaques clients est un suivi personnalisé dans cet espace.
                         </p>
@@ -97,10 +97,10 @@
                     <div class="card-body">
                         <h5 class="card-header" >{$fiche.nom}  {$fiche.prenom}</h5>
                         <p class="card-text">{$fiche.date_fiche}</p>
-                        <a class="btn anton black bg_yel_oni" href="{$link->getFiche($fiche.id_fiche)}">Consulter la fiche de suivi</a>
+                        <a class="col-3 col-md-3 ml-auto mr-auto btn anton black bg_yel_oni" href="{$link->getFiche($fiche.id_fiche)}">Consulter la fiche de suivi</a>
                     </div>    
                 </div>
-                
+                <div style="margin-bottom: 20px"></div>
             {/foreach}
                     
         </div>

@@ -1,11 +1,32 @@
 {extends file="template/layout.tpl"}
 
 {block name="content"}
+    <div class="bandeau">
+            <div id="bg_connexion">
 
-    <div style="margin-top: 200px"></div> 
+            </div>
+                <div class="bg_opacity">
+                </div>
+
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 mt-5">
+                        <h1 class="white big_font mt-5">ESPACE CLIENT</h1>
+
+                    </div>
+                    <div class="offset-md-3 col-12 col-md-6 text-justify mt-5">
+                        <p class="white">
+                            Postez vos fiches de suivi, et suivez les recommandations de votre Coach Santé dans votre espace personnel
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div style="margin-top: 20px"></div> 
     <div class="container">
         <h1>Bienvenu sur votre espace personnel: {$utilisateur->getPrenom()}</h1>
-        <p>Vous pouvez changer vos informations et coordonnées personnelles</p>
+        <p><em>Vous pouvez changer vos informations et coordonnées personnelles</em></p>
 
             <form action="" method="post">
                 <label>Nom</label>

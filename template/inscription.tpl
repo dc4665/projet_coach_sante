@@ -14,7 +14,7 @@
                         <h1 class="white big_font mt-5">ESPACE CLIENT</h1>
 
                     </div>
-                    <div class="offset-md-3 col-12 col-md-6 text-left mt-5">
+                    <div class="offset-md-3 col-12 col-md-6 text-justify mt-5">
                         <p class="white">
                             Postez vos fiches de suivi, et suivez les recommandations de votre Coach Santé dans votre espace personnel
                         </p>
@@ -25,7 +25,7 @@
 
     </div>
     {* Formulaire d'inscription *}
-            <div style="margin-top: 50px" class="container form_font anton">
+            <div style="margin-top: 20px" class="container form_font anton">
                 <h2 style="text-align: center" class="medium_font">INSCRIPTION</h2>
                     <div class="row">
                         <div class="col-12 col-md-6 ml-auto mr-auto">
@@ -64,7 +64,7 @@
                                 <label>Mot de passe</label>
                                 <input type="password" class="form-control" name="password" id="password" required /><br/>
 
-                                <button style="margin-bottom: 50px" type="submit" name="inscription" class="btn anton bg_yel_oni btn-block">VALIDER L'INSCRIPTION</button>
+                                <button style="margin-bottom: 20px" type="submit" name="inscription" class="btn anton bg_yel_oni btn-block">VALIDER L'INSCRIPTION</button>
 
                                 {if isset($success)}
                                     <div>{$success}</div>
