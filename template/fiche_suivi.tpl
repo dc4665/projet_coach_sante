@@ -42,6 +42,8 @@
                                 <p class="card-body" style="line-height: 160%">{$fiche->getActivite()}</p>
                                 <label class="card-header anton" class="form-font anton">Commentaire</label>
                                 <p class="card-body" style="line-height: 160%">{$fiche->getCommentaire()}</p>
+                                <img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_face()}" alt=""/>
+                                <img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_profil()}" alt=""/>
                             </div>    
                         </div>
                             
@@ -84,6 +86,8 @@
                             <p class="card-body">{$fiche->getActivite()}</p>
                             <label class="card-header anton" class="form-font anton yellow">Commentaire</label>
                             <p class="card-body">{$fiche->getCommentaire()}</p>
+                            <img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_face()}" alt=""/>
+                            <img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_profil()}" alt=""/>
                         </div>    
                     </div>
                     {* Formulaire pour commenter une fiche de suivi *}

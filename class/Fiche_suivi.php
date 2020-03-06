@@ -10,7 +10,7 @@ class Fiche_suivi extends Objet {
     private $_commentaire;
     private $_actif;
     private $_chemin_photo_face;
-    private $_chemin_photo_profile;
+    private $_chemin_photo_profil;
 
 
     //getters
@@ -42,8 +42,8 @@ class Fiche_suivi extends Objet {
         return $this->_chemin_photo_face;
     }
 
-    public function getChemin_photo_profile(){
-        return $this->_chemin_photo_profile;
+    public function getChemin_photo_profil(){
+        return $this->_chemin_photo_profil;
     }
 
     //setters
@@ -75,16 +75,16 @@ class Fiche_suivi extends Objet {
         $this->_chemin_photo_face = $chemin_photo_face;
     }
 
-    public function setChemin_photo_profile($chemin_photo_profile){
-        $this->_chemin_photo_profile = $chemin_photo_profile;
+    public function setChemin_photo_profil($chemin_photo_profil){
+        $this->_chemin_photo_profil = $chemin_photo_profil;
     }
 
 
     //Méthodes de CRUD 
     //Méthode pour ajouter une nouvelle fiche
-    public function ajouterFiche($date, $poids, $alimentation, $activite, $commentaire, $actif, $id_personne){
+    public function ajouterFiche($date, $poids, $alimentation, $activite, $commentaire, $actif, $id_personne, $image_1, $image_2){
         
-        $sql = $GLOBALS['bdd']->prepare('INSERT INTO fichesuivi (date_fiche, poids, alimentation, activite, commentaire, actif, id_personne) VALUES (:date, :poids, :alimentation, :activite, :commentaire, :actif, :id_personne)');
+        $sql = $GLOBALS['bdd']->prepare('INSERT INTO fichesuivi (date_fiche, poids, alimentation, activite, commentaire, actif, id_personne, chemin_photo_face, chemin_photo_profil) VALUES (:date, :poids, :alimentation, :activite, :commentaire, :actif, :id_personne, :image_1, :image_2)');
 
         $sql->bindValue(':date', $date);
         $sql->bindValue(':poids', $poids);
@@ -93,6 +93,9 @@ class Fiche_suivi extends Objet {
         $sql->bindValue(':commentaire', $commentaire);
         $sql->bindValue(':actif', $actif);
         $sql->bindValue(':id_personne', $id_personne);
+        $sql->bindValue(':image_1', $image_1);
+        $sql->bindValue(':image_2', $image_2);
+
 
         $result = $sql->execute();
 

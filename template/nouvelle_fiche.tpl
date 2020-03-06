@@ -26,7 +26,7 @@
     <div style="margin-top: 50px" class="connexion">
         <h2 class="medium_font">VOTRE FICHE DE SUIVI DE LA SEMAINE</h2>
             <br>
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
                 <label style="color: grey" class="form-font anton">Poids (en kg)</label>
                 <input type="number" class="col-4 col-md-4 ml-auto mr-auto form-control" name="poids" id="poids" required /><br/>
 
@@ -40,7 +40,13 @@
                 <textarea type="text" class="col-4 col-md-4 ml-auto mr-auto form-control" name="activite" id="activite" required/></textarea><br/>
 
                 <label style="color: grey" class="form-font anton">Commentaire</label>
-                <textarea type="text" class="col-4 col-md-4 ml-auto mr-auto form-control" name="commentaire" id="commentaire" ></textarea><br/>
+                <textarea type="text" class="col-4 col-md-4 ml-auto mr-auto form-control" name="commentaire" id="commentaire" required></textarea><br/>
+
+                <label>Image de face</label>
+                <input type="file" name="files[image_1]" id="files[image_1]" required/><br/>
+
+                <label>Image de profil</label>
+                <input type="file" name="files[image_2]" id="files[image_2]"/ required><br/>
 
                 <button style="margin-bottom: 50px" type="submit" name="nouvelle_fiche" class="col-4 col-md-4 ml-auto mr-auto btn anton bg_yel_oni btn-block">ENVOYER</button> 
 
