@@ -25,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../locjeuxpoo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -56,10 +56,20 @@
       <option name="presentableId" value="Default" />
       <updated>1583140926863</updated>
       <workItem from="1583140928820" duration="3267000" />
+      <workItem from="1583414751942" duration="131000" />
+      <workItem from="1583414884040" duration="599000" />
+      <workItem from="1583415633051" duration="5905000" />
+      <workItem from="1583480190347" duration="13145000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="620" y="261" key="FileChooserDialogImpl" timestamp="1583497879844">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="620" y="261" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1583497879844" />
   </component>
 </project>

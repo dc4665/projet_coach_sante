@@ -125,6 +125,20 @@ p
     color: #ffbf34;
 }
 
+.btn_search
+{
+    background-color: #ffbf34;
+    color: #ffffff;
+    font-family: "anton";
+}
+
+.btn_search:hover
+{
+    background-color: #ffbf34;
+    color: #1b1e21;
+    font-family: "anton";
+}
+
 /* FONT ICON GENERAL */
 
 .fas
@@ -224,6 +238,17 @@ p
     position: absolute;
     background-image:url(../img/admin.jpg);
     background-size: cover;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#bg_recherche
+{
+    position: absolute;
+    background-image:url(../img/admin.jpg);
+    background-size: auto;
     top: 0;
     bottom: 0;
     right: 0;
@@ -408,6 +433,16 @@ nav a:hover
 {
     color: #ffbf34;
     text-decoration: none;
+}
+
+/*Zone de recherche */
+.recherche
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-bottom: 1px solid #ffbf34;
+    box-shadow: 0 1px 0 0 #ce93d8;
 }
 
 /* Plan du Site*/
