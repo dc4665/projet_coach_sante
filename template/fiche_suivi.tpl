@@ -42,9 +42,17 @@
                                 <p class="card-body" style="line-height: 160%">{$fiche->getActivite()}</p>
                                 <label class="card-header anton" class="form-font anton">Commentaire</label>
                                 <p class="card-body" style="line-height: 160%">{$fiche->getCommentaire()}</p>
-                                <img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_face()}" alt=""/>
-                                <img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_profil()}" alt=""/>
-                            </div>    
+                            </div>
+                            <br>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-12 col-md-4">
+                                    <a href="template/img/fiche_suivi/500-{$fiche->getChemin_photo_face()}" data-lightbox="fiche_suivi_face"><img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_face()}" width="200" alt="photo de face"/></a>
+                                </div>
+                                <div class="offset-md-2"></div>
+                                <div class="col-12 col-md-4">    
+                                    <a href="template/img/fiche_suivi/500-{$fiche->getChemin_photo_profil()}" data-lightbox="fiche_suivi_profil"><img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_profil()}" width="200" alt="photo de profil"/></a>
+                                </div>    
+                            </div>        
                         </div>
                             
                     {* Block qui s'affiche si un coach a laissé des commentaires sur la fiche *}
@@ -66,9 +74,9 @@
                             {/if}
                         </div>        
                     </div>
-                <div style="margin-top: 25px" class="row d-flex justify-content-center">    
-                    <a style="margin-bottom: 20px" href="{$link->getPage('personne')}" class="col- col-md-4 ml-auto mr-auto btn anton yellow bg_black btn-lg">RETOUR</a>
-                </div>
+                    <div style="margin-top: 25px" class="row d-flex justify-content-around">    
+                        <a style="margin-bottom: 20px" href="{$link->getPage('personne')}" class="col- col-md-4 ml-auto mr-auto btn anton yellow bg_black btn-lg">RETOUR</a>
+                    </div>
                 </div>
 
         {* page affichée si l'utilisateur est coach *}
@@ -86,12 +94,13 @@
                             <p class="card-body">{$fiche->getActivite()}</p>
                             <label class="card-header anton" class="form-font anton yellow">Commentaire</label>
                             <p class="card-body">{$fiche->getCommentaire()}</p>
-                            <img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_face()}" alt=""/>
-                            <img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_profil()}" alt=""/>
                         </div>    
                     </div>
                     {* Formulaire pour commenter une fiche de suivi *}
                     <div style="margin-top: 40px" class="col-12 col-md-6 ml-auto mr-auto">
+                        <a href="template/img/fiche_suivi/500-{$fiche->getChemin_photo_face()}" data-lightbox="fiche_suivi_face"><img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_face()}" width="150" alt="photo de face"/></a>
+                        &nbsp;
+                        <a href="template/img/fiche_suivi/500-{$fiche->getChemin_photo_profil()}" data-lightbox="fiche_suivi_profil"><img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_profil()}" width="150" alt="photo de profil"/></a>
                             <form action="" method="post">
                                 <label class="anton">Conseil - Alimentation</label>
                                 <br/>

@@ -41,13 +41,15 @@
 
                 <label style="color: grey" class="form-font anton">Commentaire</label>
                 <textarea type="text" class="col-4 col-md-4 ml-auto mr-auto form-control" name="commentaire" id="commentaire" required></textarea><br/>
-
-                <label>Image de face</label>
-                <input type="file" name="files[image_1]" id="files[image_1]" required/><br/>
-
-                <label>Image de profil</label>
-                <input type="file" name="files[image_2]" id="files[image_2]"/ required><br/>
-
+                <br>
+                <label style="color: grey" class="form-font anton">Image de face :</label>
+                
+                <input type="file" class="input-file" name="files[image_1]" id="files[image_1]" required/>
+                
+                &nbsp;
+                <label style="color: grey" class="form-font anton">Image de profil :</label>
+                <input type="file" class="input-file" name="files[image_2]" id="files[image_2]" required ><br/>
+                <br>
                 <button style="margin-bottom: 50px" type="submit" name="nouvelle_fiche" class="col-4 col-md-4 ml-auto mr-auto btn anton bg_yel_oni btn-block">ENVOYER</button> 
 
             </form>  
