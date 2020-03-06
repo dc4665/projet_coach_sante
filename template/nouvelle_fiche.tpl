@@ -37,7 +37,7 @@
                 <textarea type="text" class="col-4 col-md-4 ml-auto mr-auto form-control" name="alimentation" id="alimentation" required/></textarea><br/>
 
                 <label style="color: grey" class="form-font anton">Activités de la semaine <br> (Indiquez les exercices et la durée de vos entrainements)</label> 
-                <textarea type="text" class="col-4 col-md-4 ml-auto mr-auto form-control" name="activite" id="activite" required/></textarea><br/>
+                <textarea type="text" class="col-4 col-md-4 ml-auto mr-auto form-control" name="activite" id="activite" required /></textarea><br/>
 
                 <label style="color: grey" class="form-font anton">Commentaire</label>
                 <textarea type="text" class="col-4 col-md-4 ml-auto mr-auto form-control" name="commentaire" id="commentaire" required></textarea><br/>

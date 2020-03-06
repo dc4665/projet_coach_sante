@@ -431,15 +431,6 @@ nav a:hover
     text-decoration: none;
 }
 
-/*Zone de recherche */
-.recherche
-{
-    font-family: "anton";
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
 /* Plan du Site*/
 #plan_site li
 {

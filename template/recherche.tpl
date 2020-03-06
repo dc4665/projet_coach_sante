@@ -4,30 +4,35 @@
 {block name="content"}
 <!-- Bandeau -->
 <div class="bandeau">
-    <div id="bg_recherche">
+            <div id="bg_admin">
 
-    </div>
-    <div class="bg_opacity">
-    </div>
+            </div>
+                <div class="bg_opacity">
+                </div>
 
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-12 mt-5">
-                <h1 class="white big_font mt-5">RECHERCHE D'UN CLIENT</h1>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 mt-5">
+                        <h1 class="white big_font mt-5">ZONE RECHERCHE</h1>
+
+                    </div>
+                    <div class="offset-md-3 col-12 col-md-6 text-justify mt-5">
+                        <p class="white">
+                            Vous pouvez rechercher et afficher les coordonnées de tous les membres, coachs et admin du site, dans cette section.                         
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="offset-md-3 col-12 col-md-6 text-justify mt-5">
-                <p class="white">
-                </p>
-            </div>
-        </div>
     </div>
-</div>
 <!-- Zone de recherche -->
-    <div class="recherche">
-        <form action="" method="post">
-            <input type="search" name="recherche" placeholder="Nom ou prénom" />
-            <button type="submit" value="" name="rechercher" class="ml-auto mr-auto btn yellow anton bg_black"">Rechercher</button>
-        </form>
+    <div class="container">
+        <div style="margin-top: 50px" class="row d-flex justify-content-center">
+            <form action="" method="post">
+                <input class="form-control" type="search" name="recherche" placeholder="">
+                &nbsp;
+                <button type="submit" value="" name="rechercher" class="btn anton yellow bg_black"><i class="yellow fas fa-search"></i> Rechercher</button>
+            </form>
+        </div>    
     </div>
     {if isset($clients)}
         {foreach from=$clients item=client}
