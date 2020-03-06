@@ -241,7 +241,29 @@ class Personne extends Objet {
         $this->hydrate($sql);
 
         return $this;
-    } 
+    }
+
+    //FONCTION LÉO
+    public function recherchePersonne($recherche){
+        $client = [];
+
+        $sql = $GLOBALS['bdd']->query('SELECT id_personne, nom, prenom, tel, email, date_naissance, sexe, taille  FROM personne WHERE prenom LIKE "%'.$recherche.'%" OR nom LIKE "%'.$recherche.'%"');
+
+        while($donnees = $sql->fetch()){
+
+            $client[] = new Personne($donnees);
+        }
+
+        return $client;
+    }
+
+    public function getNombreFiche($id_personne){
+        $sql = $GLOBALS['bdd']->query('SELECT COUNT(*) FROM fichesuivi WHERE id_personne='.$id_personne);
+
+        $nb = $sql->fetchColumn();
+
+        return $nb;
+    }
 
     //Fonction utilisé par l'administrateur pour supprimer un utilisateur
     public function deletePersonne(int $id_personne){
