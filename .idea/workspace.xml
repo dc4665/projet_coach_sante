@@ -25,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../locjeuxpoo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,7 +59,9 @@
       <workItem from="1583414751942" duration="131000" />
       <workItem from="1583414884040" duration="599000" />
       <workItem from="1583415633051" duration="5905000" />
-      <workItem from="1583480190347" duration="13145000" />
+      <workItem from="1583480190347" duration="13744000" />
+      <workItem from="1583503353462" duration="59000" />
+      <workItem from="1583503436736" duration="4072000" />
     </task>
     <servers />
   </component>
@@ -71,5 +73,9 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="620" y="261" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1583497879844" />
+    <state x="496" y="233" key="run.anything.popup" timestamp="1583504434212">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="496" y="233" key="run.anything.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1583504434212" />
   </component>
 </project>
