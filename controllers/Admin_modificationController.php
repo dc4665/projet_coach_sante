@@ -27,13 +27,14 @@ if(isset($_POST['modification'])){
     $tel = $_POST['tel'];
     $email = $_POST['email'];
     $id_role = $_POST['role'];
-    echo($id_role);
+    
     $id_personne = $personne->getId_personne();
 
     $modification = new Personne();
     $modification = $modification->updatePersonneAdmin($nom, $prenom, $tel, $email, $id_role, $id_personne);
 
-    $smarty->assign('success', 'Le membre a bien été modifié !');
+    echo('<script>document.location.href="http://localhost/projet_coach_sante/?action=admin_manager&confirmation=ok"</script>');
+
     
 }
 

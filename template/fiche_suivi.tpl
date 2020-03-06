@@ -32,30 +32,32 @@
             <div style="margin-top: 20px">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6 col-md-6 ml-auto mr-auto">
+                        <div class="col-12 col-md-6 ml-auto mr-auto">
                             <h2 class="text-center medium_font yellow">Résumé de votre fiche du: {$fiche->getDate_fiche()}</h2>
                             <br>
-                            <label style="" class="form-font anton">Alimentation (Saisissez vos repas de la semaine)</label>
-                            <p style="line-height: 160%">{$fiche->getAlimentation()}</p>
-                            <label class="form-font anton">Activités de la semaine <br> (Indiquez les exercices et la durée de vos entrainements)</label>
-                            <p style="line-height: 160%">{$fiche->getActivite()}</p>
-                            <label class="form-font anton">Commentaire</label>
-                            <p style="line-height: 160%">{$fiche->getCommentaire()}</p>
+                            <div class="card">
+                                <label class="card-header anton" class="form-font anton">Alimentation (Saisissez vos repas de la semaine)</label>
+                                <p class="card-body" style="line-height: 160%">{$fiche->getAlimentation()}</p>
+                                <label class="card-header anton" class="form-font anton">Activités de la semaine <br> (Indiquez les exercices et la durée de vos entrainements)</label>
+                                <p class="card-body" style="line-height: 160%">{$fiche->getActivite()}</p>
+                                <label class="card-header anton" class="form-font anton">Commentaire</label>
+                                <p class="card-body" style="line-height: 160%">{$fiche->getCommentaire()}</p>
+                            </div>    
                         </div>
                             
                     {* Block qui s'affiche si un coach a laissé des commentaires sur la fiche *}
-                        <div style="margin-top: 125px" class="col-6 col-md-6 ml-auto mr-auto">
+                        <div style="margin-top: 100px" class="col-12 col-md-6 ml-auto mr-auto">
                             {if isset($commentaires)}
                             <div class="container">
                                 <h2>Les conseils de Coach : {$coach}</h2>
                                 {foreach from=$commentaires item=donnee}
-                                    <div>
-                                        <label class="form-font anton">Sur l'alimentation</label>
-                                        <p style="line-height: 160%">{$donnee.alimentation_coach}</p>
-                                        <label style="margin-top: 100px" class="form-font anton">Sur votre activité physique</label>
-                                        <p style="line-height: 160%">{$donnee.activite_coach}</p>
-                                        <label style="margin-top: 100px" class="form-font anton">Autre(s) recommandation(s)</label>
-                                        <p style="line-height: 160%">{$donnee.commentaire_coach}</p>
+                                    <div class="card">
+                                        <label class="card-header anton" class="form-font anton">Sur l'alimentation</label>
+                                        <p class="card-body" style="line-height: 160%">{$donnee.alimentation_coach}</p>
+                                        <label class="card-header anton" style="margin-top: 100px" class="form-font anton">Sur votre activité physique</label>
+                                        <p class="card-body" style="line-height: 160%">{$donnee.activite_coach}</p>
+                                        <label class="card-header anton" style="margin-top: 100px" class="form-font anton">Autre(s) recommandation(s)</label>
+                                        <p class="card-body" style="line-height: 160%">{$donnee.commentaire_coach}</p>
                                     </div>
                                 {/foreach}
                             </div>
@@ -69,31 +71,44 @@
 
         {* page affichée si l'utilisateur est coach *}
         {elseif $utilisateur->getId_role() == 2 OR 1}
-            <div style="margin-top: 20px"></div>
-            <div class="connexion">
-                <h2>Fiche de suivi du: {$fiche->getDate_fiche()}</h2>
-                <label class="form-font anton yellow">Alimentation</label>
-                <p>{$fiche->getAlimentation()}</p>
-                <br>
-                <label class="form-font anton yellow">Activités de la semaine</label>
-                <p>{$fiche->getActivite()}</p>
-                <label class="form-font anton yellow">Commentaire</label>
-                <p>{$fiche->getCommentaire()}</p>
-                <br/>
-        {* Fromulaire pour commenter une fiche de suivi *}
-                <form action="" method="post">
-                    <label>Conseil - Alimentation</label><br/>
-                    <textarea type="text" name="alimentation_coach" id="alimentation_coach"></textarea><br/>
-                    <label>Conseil - Activité</label><br/>
-                    <textarea type="text" name="activite_coach" id="activite_coach"></textarea><br/>
-                    <label>Conseil - Divers</label><br/>
-                    <textarea type="text" name="commentaire_coach" id="commentaire_coach"></textarea><br/>
-                    <button type="submit" name="coach_review" class="btn btn-primary">Soumettre le compte-rendu</button>
-                </form>
-
-            </div>
+        <div style="margin-top: 30px"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 ml-auto mr-auto">
+                        <h2>Fiche de suivi du: {$fiche->getDate_fiche()}</h2>
+                        <div class="card">
+                            <label class="card-header anton" class="form-font anton yellow">Alimentation</label>
+                            <p class="card-body">{$fiche->getAlimentation()}</p>
+                            <br>
+                            <label class="card-header anton" class="form-font anton yellow">Activités de la semaine</label>
+                            <p class="card-body">{$fiche->getActivite()}</p>
+                            <label class="card-header anton" class="form-font anton yellow">Commentaire</label>
+                            <p class="card-body">{$fiche->getCommentaire()}</p>
+                        </div>    
+                    </div>
+                    {* Formulaire pour commenter une fiche de suivi *}
+                    <div style="margin-top: 40px" class="col-12 col-md-6 ml-auto mr-auto">
+                            <form action="" method="post">
+                                <label class="anton">Conseil - Alimentation</label>
+                                <br/>
+                                <textarea class="form-control" name="alimentation_coach" id="alimentation_coach" rows="3"></textarea>
+                                <br/>
+                                <label style="margin-top: 40px"  class="anton">Conseil - Activité</label>
+                                <br/>
+                                <textarea class="form-control" name="activite_coach"  id="activite_coach" rows="3"></textarea>
+                                <br/>
+                                <label style="margin-top: 40px" class="anton">Conseil - Divers</label>
+                                <br/>
+                                <textarea class="form-control" name="commentaire_coach" id="commentaire_coach" rows="3"></textarea>
+                                <br/>
+                                <button type="submit" name="coach_review" class="btn anton bg_yel_oni">Soumettre le compte-rendu</button>
+                            </form>
+                            </div>   
+                    </div>     
+                </div>           
+            </div>        
         {/if}
-
+    <br><br>
     {/if}
 
 {/block}

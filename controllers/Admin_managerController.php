@@ -14,9 +14,14 @@ if($_SESSION['utilisateur']->getId_role() == 1){
     
 }
 
-if(isset($_GET)){
+if(isset($_GET['confirmation'])){
 
     $smarty->assign('success', 'L\'utilisateur a bien été mise à jour!');
+}
+
+if(isset($_GET['delete'])){
+
+    $smarty->assign('delete', 'L\'utilisateur a été supprimé');
 }
 
 

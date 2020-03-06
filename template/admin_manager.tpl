@@ -34,6 +34,10 @@
         {if isset($success)}
             <div class="alert-success">{$success}</div>
         {/if}
+        {if isset($delete)}
+            <div class="alert-success">{$delete}</div>
+        {/if}
+
 
         <h2 class="text-center">LISTE DES UTILISATEURS</h2>
         {foreach from=$personnes item=personne}
@@ -42,14 +46,14 @@
                     <h5 class="card-header anton">{$personne.nom} {$personne.prenom}</h5>
                         <div class="card-text">
                             <div class="row">
-                                <div class="col-4 col-md-4 text-center"><div class="p-4">{$personne.email}</div></div> 
-                                <div class="col-4 col-md-4 text-center"><div class="p-4"><strong>{$personne.tel}</strong></div></div> 
-                                <div class="col-4 col-md-4 text-center"><div class="p-4">{$personne.nom_role}</div></div>
+                                <div class="col-12 col-md-4 text-center"><div class="p-4"><p><em>{$personne.email}</em></p></div></div> 
+                                <div class="col-12 col-md-4 text-center"><div class="p-4"><strong>{$personne.tel}</strong></div></div> 
+                                <div class="col-12 col-md-4 text-center"><div class="p-4"><p>{$personne.nom_role}</p></div></div>
                             </div>
                         </div>
                         <div class="row">
                             <a class="col-3 col-md-3 ml-auto mr-auto btn anton black bg_yel_oni" href="{$link->getUtilisateur($personne.id_personne)}">Modifier</a>
-                            <a class="col-3 col-md-3 ml-auto mr-auto btn anton btn-danger" btn href="{$link->getPage('delete')}">Supprimer l'utilisateur</a>
+                            <a class="col-3 col-md-3 ml-auto mr-auto btn anton btn-danger" btn href="{$link->getPage('delete')|cat:'&id_personne='|cat:{$personne.id_personne}}">Supprimer l'utilisateur</a>
                         </div> 
                 </div>
             </div>
