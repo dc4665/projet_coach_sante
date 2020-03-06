@@ -6,7 +6,6 @@ if(isset($_POST['recherche'])){
     $rechercher = new Personne;
 
     $client = $rechercher->recherchePersonne($recherche);
-    var_dump(count($client));
 
     if(count($client) == 0){
         $smarty->assign('alert', 'Ce client est inexistant');

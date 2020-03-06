@@ -11,6 +11,7 @@ if(isset($_POST['inscription'])){
     $password = $_POST['password'];
     $sexe = $_POST['sexe'];
     
+    
     //On instancie un objet vide pour pouvour utiliser la méthode
     $utilisateur = new Personne();
 
@@ -22,7 +23,7 @@ if(isset($_POST['inscription'])){
         $smarty->assign('alert', 'Cette adresse Email est déjà utilisée');
 
     } else {
-        $utilisateur->ajouterPersonne($nom, $prenom, $tel, $email, $password, $date_naissance, $taille);
+        $utilisateur->ajouterPersonne($nom, $prenom, $tel, $email, $password, $date_naissance, $sexe, $taille,);
 
         echo('<script>document.location.href="http://localhost/projet_coach_sante/?action=connexion&confirmation=ok"</script>');
     }
