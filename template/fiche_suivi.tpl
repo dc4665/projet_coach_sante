@@ -33,7 +33,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-6 ml-auto mr-auto">
-                            <h2 class="text-center medium_font yellow">Résumé de votre fiche du: {$fiche->getDate_fiche()}</h2>
+                            <h2 class="text-center medium_font yellow">Résumé de votre fiche du: {$fiche->getDate_fiche()|date_format:"%d/%m/%Y"}</h2>
                             <br>
                             <div class="card">
                                 <label class="card-header anton" class="form-font anton">Alimentation (Saisissez vos repas de la semaine)</label>
@@ -77,7 +77,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6 ml-auto mr-auto">
-                        <h2>Fiche de suivi du: {$fiche->getDate_fiche()}</h2>
+                        <h2>Fiche de suivi du: {$fiche->getDate_fiche()|date_format:"%d/%m/%Y"}</h2>
                         <div class="card">
                             <label class="card-header anton" class="form-font anton yellow">Alimentation</label>
                             <p class="card-body">{$fiche->getAlimentation()}</p>

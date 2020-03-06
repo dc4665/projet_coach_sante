@@ -18,4 +18,5 @@ class Link {
         return '?action=admin_modification&id_personne='.$id_personne;
     }
     
+    
 }

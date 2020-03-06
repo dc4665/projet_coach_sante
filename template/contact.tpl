@@ -27,9 +27,11 @@
         
     </div>
     <!-- Partie Formulaire -->
-    
+    {if isset($success)}
+        <div class="alert alert-success">{$success}</div>
+    {/if}
     <div class="container mt-5">
-        <form>
+        <form action="" method="post">
             
             <div class="row">
                 
@@ -39,28 +41,28 @@
                     <div class="row">
                         <div class="col">
                             <label class="form_font anton uppercase">nom et prénom</label>
-                            <input type="text" class="form-control" placeholder="Nom et Prénom">
+                            <input type="text" class="form-control" name="nom" placeholder="Nom et Prénom">
                         </div>
                     </div>
                     
                     <div class="row mt-3">
                         <div class="col">
                             <label class="form_font anton uppercase">e-mail</label>
-                            <input type="email" class="form-control" placeholder="adresse@Email.com">
+                            <input type="email" class="form-control" name="email" placeholder="adresse@Email.com">
                         </div>
                     </div>
                     
-                    <div class="row mt-3">
+                   {*  <div class="row mt-3">
                         <div class="col">
                             <label class="form_font anton uppercase">@Instagram</label>
                             <div class="input-group">                 
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">@</div>
                                 </div>
-                                <input type="text" class="form-control" placeholder="monInstagram">
+                                <input type="text" class="form-control" name="instgram" placeholder="monInstagram">
                             </div>
                         </div>
-                    </div>
+                    </div> *}
                     
                 </div>
                 
@@ -70,20 +72,20 @@
                     <div class="row">
                         <div class="col">
                             <label class="form_font anton uppercase">objet</label>
-                            <input type="text" class="form-control" placeholder="Sujet de ma demande">
+                            <input type="text" class="form-control" name="objet" placeholder="Sujet de ma demande">
                         </div>
                     </div>
                     
                     <div class="row mt-3">
                         <div class="col">
                             <label class="form_font anton uppercase">message</label>
-                            <textarea class="form-control" rows="5"></textarea>
+                            <textarea class="form-control" name="message" rows="5"></textarea>
                         </div>
                     </div>
                     
                     <div class="row mt-4">
                         <div class="col">
-                            <button type="submit" class="btn button_big bg_yel_oni anton">ENVOYER</button>
+                            <button type="submit" name="contact" class="btn button_big bg_yel_oni anton">ENVOYER</button>
                         </div>
                     </div>
                 </div>
