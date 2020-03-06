@@ -158,7 +158,7 @@
                 <div class="d-flex justify-content-center">
                     <div class="card w-50">
                         <div class="card-body">
-                            <h5 class="card-header text-center" >{$fiche.nom}  {$fiche.prenom} &nbsp; {$fiche.date_fiche} &nbsp; <i class="fas fa-pencil-alt"></i></h5>
+                            <h5 class="card-header text-center" >{$fiche.nom}  {$fiche.prenom} &nbsp; {$fiche.date_fiche_fra} &nbsp; <i class="fas fa-pencil-alt"></i></h5>
                             <a class="col-12 ml-auto mr-auto btn anton black bg_yel_oni" href="{$link->getFiche($fiche.id_fiche)}">Consulter la fiche de suivi</a>
                         </div>    
                     </div>
