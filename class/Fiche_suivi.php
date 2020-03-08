@@ -109,7 +109,7 @@ class Fiche_suivi extends Objet {
 
         $fiches = [];
         
-        $sql = $GLOBALS['bdd']->query('SELECT * FROM fichesuivi WHERE id_personne =' .$id_personne);
+        $sql = $GLOBALS['bdd']->query('SELECT * FROM fichesuivi WHERE id_personne = ' .$id_personne. ' ORDER BY date_fiche DESC');
 
         while($donnees = $sql->fetch(PDO::FETCH_ASSOC)){
 
@@ -137,7 +137,7 @@ class Fiche_suivi extends Objet {
 
         $fiches = [];
         
-        $sql = $GLOBALS['bdd']->query('SELECT p.nom, p.prenom, f.date_fiche, f.id_fiche, DATE_FORMAT(f.date_fiche, "%d/%m/%Y") AS date_fiche_fra FROM fichesuivi f LEFT JOIN personne p ON f.id_personne = p.id_personne WHERE f.actif = 0');
+        $sql = $GLOBALS['bdd']->query('SELECT p.nom, p.prenom, f.date_fiche, f.id_fiche FROM fichesuivi f LEFT JOIN personne p ON f.id_personne = p.id_personne WHERE f.actif = 0');
 
         while($donnees = $sql->fetch()){
 
@@ -146,14 +146,6 @@ class Fiche_suivi extends Objet {
 
         return $fiches;
 
-        /* $sql = $GLOBALS['bdd']->query('SELECT * FROM fichesuivi WHERE actif = 0 ');
-
-        while($donnees = $sql->fetch(PDO::FETCH_ASSOC)){
-
-            $fiches[] = new Fiche_suivi($donnees);
-        }
-
-        return $fiches; */
 
     }
 

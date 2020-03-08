@@ -1,6 +1,5 @@
 <?php
 
-setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
 //On vérifie l'id_role de l'utilisateur connecté 
 if($_SESSION['utilisateur']->getId_role() == 3){
 

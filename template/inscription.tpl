@@ -50,16 +50,18 @@
                                 <input type="text" class="form-control" name="prenom" id="prenom" required />
 
                                 <label>Taille (en CM)</label>
-                                <input type="number" class="form-control" name="taille" id="taille" required />
+                                <input type="number" min="0" class="form-control" name="taille" id="taille" required />
 
                                 <label>Date de naissance</label>
                                 <input type="date" class="form-control" name="date_naissance" id="date_naissance" required />
 
                                 <label>E-Mail</label>
-                                <input type="email" class="form-control" name="email" id="email" required />
+                                <input type="email" class="form-control" placeholder="ex: nouveau_membre@mail.com" name="email" id="email" required />
 
                                 <label>Téléphone</label>
-                                <input type="tel" class="form-control" name="tel" id="tel" required />
+                                {literal} 
+                                <input type="tel" maxlength="10" pattern="[0-9]{10}" placeholder="ex: 0601020304" class="form-control" name="tel" id="tel" required />
+                                {/literal}
 
                                 <label>Mot de passe</label>
                                 <input type="password" class="form-control" name="password" id="password" required /><br/>

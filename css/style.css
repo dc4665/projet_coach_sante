@@ -431,6 +431,17 @@ nav a:hover
     text-decoration: none;
 }
 
+.fiche_suivi_bold
+{
+    font-weight: bold;
+}
+
+/* CSS pour le côté admin du site */
+.bold 
+{
+    font-weight: bold;
+}
+
 /* Plan du Site*/
 #plan_site li
 {
@@ -451,6 +462,23 @@ nav a:hover
     text-decoration-line: none;
     color: #ffbf34;
 }
+
+.card
+{
+    border: 1px solid black;
+    box-shadow: 4px 4px 15px black;
+}
+
+.card-header
+{
+    background-color: #ffbf34;
+}
+
+.card-header a:hover
+{
+    color: white;
+}
+
 
 /* FOOTER */
 footer

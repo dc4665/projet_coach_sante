@@ -1,7 +1,14 @@
 {extends file="template/layout.tpl"}
 
 {block name="content"}
-    <div class="bandeau">
+    
+
+    {* Vérification qu'une SESSION existe bien *}
+    {if isset($utilisateur)}
+        {* page affichée si l'utilisateur est membre *}
+        {if $utilisateur->getId_role() == 3}
+        <div class="bandeau">
+
             <div id="bg_connexion">
 
             </div>
@@ -23,17 +30,13 @@
 
             </div>
 
-    </div>
+        </div>
 
-    {* Vérification qu'une SESSION existe bien *}
-    {if isset($utilisateur)}
-        {* page affichée si l'utilisateur est membre *}
-        {if $utilisateur->getId_role() == 3}
             <div style="margin-top: 20px">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-6 ml-auto mr-auto">
-                            <h2 class="text-center medium_font yellow">Résumé de votre fiche du: {$fiche->getDate_fiche()|date_format:"%d/%m/%Y"}</h2>
+                            <h2 class="text-center medium_font yellow my-3">Résumé de votre fiche du: <span class="black">{$fiche->getDate_fiche()|date_format:"%d/%m/%Y"}</span></h2>
                             <br>
                             <div class="card">
                                 <label class="card-header anton" class="form-font anton">Alimentation (Saisissez vos repas de la semaine)</label>
@@ -46,11 +49,11 @@
                             <br>
                             <div class="row d-flex justify-content-center">
                                 <div class="col-12 col-md-4">
-                                    <a href="template/img/fiche_suivi/500-{$fiche->getChemin_photo_face()}" data-lightbox="fiche_suivi_face"><img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_face()}" width="200" alt="photo de face"/></a>
+                                    <a href="{$link->getImage(500)}{$fiche->getChemin_photo_face()}" data-lightbox="fiche_suivi_face"><img src="{$link->getImage(500)}{$fiche->getChemin_photo_face()}" width="200" alt="photo de face"/></a>
                                 </div>
                                 <div class="offset-md-2"></div>
                                 <div class="col-12 col-md-4">    
-                                    <a href="template/img/fiche_suivi/500-{$fiche->getChemin_photo_profil()}" data-lightbox="fiche_suivi_profil"><img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_profil()}" width="200" alt="photo de profil"/></a>
+                                    <a href="{$link->getImage(500)}{$fiche->getChemin_photo_profil()}" data-lightbox="fiche_suivi_profil"><img src="{$link->getImage(500)}{$fiche->getChemin_photo_profil()}" width="200" alt="photo de profil"/></a>
                                 </div>    
                             </div>        
                         </div>
@@ -81,6 +84,30 @@
 
         {* page affichée si l'utilisateur est coach *}
         {elseif $utilisateur->getId_role() == 2 OR 1}
+        <div class="bandeau">
+            <div id="bg_espace_coach">
+
+            </div>
+                <div class="bg_opacity">
+                </div>
+
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 mt-5">
+                        <h1 class="white big_font mt-5">ESPACE COACH</h1>
+
+                    </div>
+                    <div class="offset-md-3 col-12 col-md-6 text-justify mt-5">
+                        <p class="white">
+                            Dispensez vos conseils en matières de nutrition et d'exercice de musculation, pour que chaque client ait un suivi personnalisé dans cet espace.  
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+    </div>
+
         <div style="margin-top: 30px"></div>
             <div class="container">
                 <div class="row">
@@ -98,9 +125,9 @@
                     </div>
                     {* Formulaire pour commenter une fiche de suivi *}
                     <div style="margin-top: 40px" class="col-12 col-md-6 ml-auto mr-auto">
-                        <a href="template/img/fiche_suivi/500-{$fiche->getChemin_photo_face()}" data-lightbox="fiche_suivi_face"><img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_face()}" width="150" alt="photo de face"/></a>
+                        <a href="{$link->getImage(500)}{$fiche->getChemin_photo_face()}" data-lightbox="fiche_suivi_face"><img src="{$link->getImage(500)}{$fiche->getChemin_photo_face()}" width="150" alt="photo de face"/></a>
                         &nbsp;
-                        <a href="template/img/fiche_suivi/500-{$fiche->getChemin_photo_profil()}" data-lightbox="fiche_suivi_profil"><img src="template/img/fiche_suivi/500-{$fiche->getChemin_photo_profil()}" width="150" alt="photo de profil"/></a>
+                        <a href="{$link->getImage(500)}{$fiche->getChemin_photo_profil()}" data-lightbox="fiche_suivi_profil"><img src="{$link->getImage(500)}{$fiche->getChemin_photo_profil()}" width="150" alt="photo de profil"/></a>
                             <form action="" method="post">
                                 <label class="anton">Conseil - Alimentation</label>
                                 <br/>

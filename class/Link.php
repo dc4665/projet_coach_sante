@@ -18,5 +18,8 @@ class Link {
         return '?action=admin_modification&id_personne='.$id_personne;
     }
     
-    
+    //Fonction utilisée pour séléctionner une image dans le bon format. Prend en paramètre le format de l'image souhaité.
+    public function getImage(int $taille){
+        return 'template/img/fiche_suivi/'.$taille.'-'; 
+    }
 }

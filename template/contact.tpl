@@ -52,18 +52,6 @@
                         </div>
                     </div>
                     
-                   {*  <div class="row mt-3">
-                        <div class="col">
-                            <label class="form_font anton uppercase">@Instagram</label>
-                            <div class="input-group">                 
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">@</div>
-                                </div>
-                                <input type="text" class="form-control" name="instgram" placeholder="monInstagram">
-                            </div>
-                        </div>
-                    </div> *}
-                    
                 </div>
                 
                 <!-- Colonne Droite -->
