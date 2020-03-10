@@ -311,7 +311,7 @@ class Personne extends Objet {
      * @param int $id_personne
      * @return $nb retourne le nombre de fiches de suivi que possède une personne.
      */
-    public function getNombreFiche($id_personne){
+    public function getNombreFiche(int $id_personne){
         $sql = $GLOBALS['bdd']->query('SELECT COUNT(*) FROM fichesuivi WHERE id_personne='.$id_personne);
 
         $nb = $sql->fetchColumn();

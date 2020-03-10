@@ -1,13 +1,18 @@
 <?php
-
+/**
+*\brief Cette Classe hérite de la classe Objet pour pouvoir utiliser les methodes __construct() et hydrate(). Cette classe est utlisée pour déterminer le rôle d'un utilisateur inscrit sur le site.  (administrateur, coach, membre/client). 
+ */
 class Role extends Objet {
 
-    //Attributs de la classe
+    /** Attributs de la classe 
+     * 
+    */
     private $_id_role;
     private $_nom_role;
 
 
-    //getters
+    /** Les méthodes getters pour récupérer les attributs de l'objet instancié.
+     */
     public function getId_role(){
         return $this->_id_role;
     }
@@ -16,7 +21,8 @@ class Role extends Objet {
         return $this->_nom_role;
     }
 
-    //setters
+    /** Les méthodes setters pour affecter les attributs de l'objet instancié. Principalement activé par la fonction hydrate() de la classe parent Objet.
+    */
     public function setId_role($id_role){
         $this->_id_role = $id_role;
     }
@@ -25,7 +31,9 @@ class Role extends Objet {
         $this->_nom_role = $nom_role;
     }
 
-    //Fonction pour récupérer toutes les informations concernant les roles et retourner un tableau contenant des objets de roles.
+    /** Méthode pour récupérer toutes les informations concernant les roles et retourner un tableau contenant des objets de la classe Role. 
+     * @return array $roles
+    */
     public function getRoles(){
 
         $roles = [];

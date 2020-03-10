@@ -1,6 +1,8 @@
 <?php
 
-//Une classe qui n'a aucun attribut mais à des méthodes pour faire l'ajout d'image.
+/** \brief Une classe qui n'a aucun attribut mais à des méthodes pour faire l'ajout d'image. 
+ * 
+*/
 class Image {
 
     //Cette fonction va permettre de déplacer le fichier dans un nouveau dossier. Car l'image est pour le moment dans un dossier tampon. La fonction renvoie en plus à la fin l'url de la source de l'image. Prend en paramètre le nom du fichier, son emplacement temporaire, et le nom du dossier dans lequel on doit l'envoyer.

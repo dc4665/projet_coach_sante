@@ -1,8 +1,12 @@
 <?php
-
+/**
+*\brief Cette Classe hérite de la classe Objet pour pouvoir utiliser les methodes __construct() et hydrate(). Cette classe est utlisée pour gérer les fiches de suivi des membres/clients. 
+ */
 class Fiche_suivi extends Objet {
 
-    //Attributs de la classe
+    /** Attributs de la classe. $_date_naissance ,  $_taille , &_sexe peuvent être NULL
+     * 
+     */
     private $_id_fiche;
     private $_date_fiche; 
     private $_alimentation;
@@ -13,7 +17,8 @@ class Fiche_suivi extends Objet {
     private $_chemin_photo_profil;
 
 
-    //getters
+    /** Les méthodes getters pour récupérer les attributs de l'objet instancié.
+     */
     public function getId_fiche(){
         return $this->_id_fiche;
     }
@@ -46,7 +51,8 @@ class Fiche_suivi extends Objet {
         return $this->_chemin_photo_profil;
     }
 
-    //setters
+     /** Les méthodes setters pour affecter les attributs de l'objet instancié. Principalement activé par la fonction hydrate() de la classe parent Objet.
+     */
     public function setId_fiche($id_fiche){
         $this->_id_fiche = $id_fiche;
     }
@@ -80,9 +86,18 @@ class Fiche_suivi extends Objet {
     }
 
 
-    //Méthodes de CRUD 
-    //Méthode pour ajouter une nouvelle fiche
-    public function ajouterFiche($date, $poids, $alimentation, $activite, $commentaire, $actif, $id_personne, $image_1, $image_2){
+    /** Méthode pour ajouter une nouvelle fiche de suivi
+     * @param string $date
+     * @param int $poids
+     * @param string $alimentation
+     * @param string $activite
+     * @param string $commentaire
+     * @param int $actif
+     * @param int $id_personne
+     * @param string $image_1
+     * @param string $image_2
+     */
+    public function ajouterFiche(string $date, int $poids, string $alimentation, string $activite, string $commentaire, int $actif, int $id_personne, string $image_1, string $image_2){
         
         $sql = $GLOBALS['bdd']->prepare('INSERT INTO fichesuivi (date_fiche, poids, alimentation, activite, commentaire, actif, id_personne, chemin_photo_face, chemin_photo_profil) VALUES (:date, :poids, :alimentation, :activite, :commentaire, :actif, :id_personne, :image_1, :image_2)');
 
@@ -104,7 +119,10 @@ class Fiche_suivi extends Objet {
         }
     }
 
-    //Méthode pour récupérer les fiches de suivis d'un utilisateur précis
+    /** Méthode pour récupérer les fiches de suivis d'un utilisateur précis 
+     * @param int $id_personne
+     * @return array $fiches
+    */
     public function getFiches(int $id_personne){
 
         $fiches = [];
@@ -120,7 +138,10 @@ class Fiche_suivi extends Objet {
     }
 
 
-    //Méthode pour récupérer UNE fiche SEULEMENT
+    /** Méthode pour récupérer UNE fiche de suivi SEULEMENT 
+     * @param int $id_fiche
+     * @return new Fiche()
+    */
     public function getFiche(int $id_fiche){
         
         $sql = $GLOBALS['bdd']->query('SELECT * FROM fichesuivi WHERE id_fiche=' .$id_fiche);
@@ -132,7 +153,9 @@ class Fiche_suivi extends Objet {
         return $this;
     }
 
-    //Méthde pour récupérer toutes les fiches de suivis de tous les clients qui n'ont pas encore été commentées par un coach.
+    /** Méthode pour récupérer toutes les fiches de suivis de tous les clients qui n'ont pas encore été commentées par un coach. \
+     * @return array $fiches
+    */
     public function getAllFichesAttentes(){
 
         $fiches = [];
@@ -145,7 +168,6 @@ class Fiche_suivi extends Objet {
         }
 
         return $fiches;
-
 
     }
 

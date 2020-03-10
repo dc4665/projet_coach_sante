@@ -1,14 +1,17 @@
 <?php
-
+/**
+*\brief Cette Classe hérite de la classe Objet pour pouvoir utiliser les methodes __construct() et hydrate(). Cette classe est utlisée pour gérer les commentaires des coachs sur les fiches de suivi des clients. 
+ */
 class Commentaire extends Objet {
 
-    //Attributs de la classe
+    /** Attributs de la classe. $_date_naissance ,  $_taille , &_sexe peuvent être NULL */
     private $_alimentation_coach;
     private $_activite_coach;
     private $_commentaire_coach;
 
 
-    //getters
+    /** Les méthodes getters pour récupérer les attributs de l'objet instancié.
+     */
     public function getAlimentation_coach(){
         return $this->_alimentation_coach;
     }
@@ -21,7 +24,8 @@ class Commentaire extends Objet {
         return $this->_alimentation_coach;
     }
 
-    //setters
+    /** Les méthodes setters pour affecter les attributs de l'objet instancié. Principalement activé par la fonction hydrate() de la classe parent Objet.
+     */
     public function setAlimentation_coach($alimentation_coach){
         return $this->_alimentation_coach = $alimentation_coach;
     }
@@ -35,10 +39,14 @@ class Commentaire extends Objet {
     }
 
 
-    //Méthode CRUD
-
-    //Méthode pour ajouter un commentaire de Coach dans la BDD
-    public function addCommentaire($alimentation_coach, $activite_coach, $commentaire_coach, $id_personne, $id_fiche){
+    /** Méthode pour ajouter un commentaire de Coach dans la BDD 
+     * @param string $alimentation_coach
+     * @param string $activite_coach
+     * @param string $commentaire_coach
+     * @param int $id_personne
+     * @param int $id_fiche
+    */
+    public function addCommentaire(string $alimentation_coach, string $activite_coach, string $commentaire_coach, int $id_personne, int $id_fiche){
 
         $sql = $GLOBALS['bdd']->prepare('INSERT INTO commentaire (alimentation_coach, activite_coach, commentaire_coach, id_personne, id_fiche) VALUES (:alimentation_coach, :activite_coach, :commentaire_coach, :id_personne, :id_fiche)');
 
@@ -60,8 +68,11 @@ class Commentaire extends Objet {
 
     }
 
-    //Méthode pour récupérer les commentaires d'un coach sur une fiche de suivi
-    public function getCommentaires($id_fiche){
+    /** Méthode pour récupérer les commentaires d'un coach sur une fiche de suivi selon son id_fiche 
+     * @param int $id_fiche
+     * @return array $commentaire
+    */
+    public function getCommentaires(int $id_fiche){
 
         $commentaires = [];
 
@@ -76,8 +87,10 @@ class Commentaire extends Objet {
 
     }
 
-    //Méthode pour vérifier si une fiche de suivi a été commentée par un coach ou pas, retourne 1 si c'est le cas, 0 dans le cas contraire
-    public function checkCommentaire($id_fiche){
+    /** Méthode pour vérifier si une fiche de suivi a été commentée par un coach ou pas, retourne 1 si c'est le cas, 0 dans le cas contraire 
+     * @param int $id_fiche
+    */
+    public function checkCommentaire(int $id_fiche){
         
         $sql = $GLOBALS['bdd']->query('SELECT COUNT(*) FROM commentaire c INNER JOIN fichesuivi f ON c.id_fiche = f.id_fiche WHERE c.id_fiche =' .$id_fiche);
 
