@@ -160,7 +160,7 @@ class Fiche_suivi extends Objet {
 
         $fiches = [];
         
-        $sql = $GLOBALS['bdd']->query('SELECT p.nom, p.prenom, f.date_fiche, f.id_fiche FROM fichesuivi f LEFT JOIN personne p ON f.id_personne = p.id_personne WHERE f.actif = 0');
+        $sql = $GLOBALS['bdd']->query('SELECT p.nom, p.prenom, f.date_fiche, f.id_fiche FROM fichesuivi f LEFT JOIN personne p ON f.id_personne = p.id_personne WHERE f.actif = 0 ORDER BY f.date_fiche');
 
         while($donnees = $sql->fetch()){
 

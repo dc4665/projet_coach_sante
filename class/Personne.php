@@ -259,13 +259,13 @@ class Personne extends Objet {
         return $sql;
     }
 
-    /** Méthode pour récupérer TOUTES les informations de TOUS les utilisateurs du site ainsi que le nom de leur ROLE qui se trouve sur une autre table. 
+    /** Méthode pour récupérer TOUTES les informations de TOUS les utilisateurs du site ainsi que le nom de leur ROLE qui se trouve sur une autre table. Seul l'administrateur (id_role = 1) n'est pas sélectionné. Méthode utilisée par l'administrateur dans Admin_managerController.
      * @return $personnes Le résultat retourné est un array contenant les informations de toutes les personnes et leurs rôles. */
     public function getAllPersonnes(){
 
         $personnes = [];
         
-        $sql = $GLOBALS['bdd']->query('SELECT * FROM personne p INNER JOIN role r ON p.id_role = r.id_role');
+        $sql = $GLOBALS['bdd']->query('SELECT * FROM personne p INNER JOIN role r ON p.id_role = r.id_role WHERE r.id_role != 1');
         /** Les données de chaque personne sont placées dans un tableau */
         while($donnees = $sql->fetch()){
 

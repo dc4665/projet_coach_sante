@@ -73,7 +73,7 @@
 
             /** envoie au format html du mail (note: on peut envoyer des mails en version txt ou html) */
             $entete = 'MIME-Version: 1.0' . "\r\n";
-            $entete .= 'Content-type: text/html; charset=iso-8859-1' . "\n";
+            $entete .= 'Content-type: text/html; charset=charset=UTF-8\r\n' . "\n";
 
             /** exécutin de la fonction mail() propre à PHP */
             $result = mail($this->_to, $this->_subject, $message, $entete);

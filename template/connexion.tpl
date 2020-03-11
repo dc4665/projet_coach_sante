@@ -36,10 +36,10 @@
             {/if}
             <form action="" method="post">
                 {if isset($erreur)}
-                <div>{$erreur}</div>
+                <div class="alert alert-danger">{$erreur}</div>
                 {/if}
                 {if isset($erreur_mail)}
-                <div>{$erreur_mail}</div>
+                <div class="alert alert-danger">{$erreur_mail}</div>
                 {/if}
                 <label class="form_font anton">E-MAIL</label>
                 <input type="email" class="col-3 col-md-3 ml-auto mr-auto form-control" name="email" id="email" required><br/>
