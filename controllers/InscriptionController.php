@@ -1,5 +1,5 @@
 <?php
-
+/** Ce fichier gère l'inscription d'un nouveau membre au site. */
 if(isset($_POST['inscription'])){
 
     $nom = $_POST['nom'];
@@ -12,7 +12,7 @@ if(isset($_POST['inscription'])){
     $sexe = $_POST['sexe'];
     
     
-    //On instancie un objet vide pour pouvour utiliser la méthode
+    //On instancie un objet vide pour pouvour utiliser les méthodes de la classe Personne.
     $utilisateur = new Personne();
 
     //Vérification que l'email n'existe pas déjà dans la condition if

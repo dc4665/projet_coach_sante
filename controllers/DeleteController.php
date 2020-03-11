@@ -1,6 +1,5 @@
 <?php
-
-//Controller utilisé pour supprimer un utilisateur. On vérifie l'id_utilisateur passé dans l'URL de admin_manager.tpl
+/** Controller utilisé pour supprimer un utilisateur. On vérifie l'id_utilisateur passé dans l'URL de admin_manager.tpl */
 if(isset($_GET)){
     
     $id_personne = $_GET['id_personne'];

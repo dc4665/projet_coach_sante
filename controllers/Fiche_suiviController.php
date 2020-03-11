@@ -1,5 +1,5 @@
 <?php
-
+/** Fichier utilisé pour gérer les informations d'une fiche de suivi séléctionnée. */
 //Récupération de l'id_fiche
 $id_fiche = $_GET['id_fiche'];
 

@@ -1,5 +1,5 @@
 <?php
-
+/** Ce fichier gère l'envoie d'email via le formulaire de contact utilisable par n'importe quel utilisateur.  */
 if(isset($_GET['confirmation'])){
 
     $smarty->assign('success', 'Votre Email a bien été envoyé !');

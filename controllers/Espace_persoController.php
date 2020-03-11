@@ -1,6 +1,5 @@
 <?php
-
-//Vérifie la présence d'une SESSION
+/** Controller utilisé pour gérer la modification des informations par un membre lui-même. */
 if(isset($_SESSION['utilisateur'])){
     
     if(isset($_POST['modification'])){

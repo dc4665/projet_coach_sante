@@ -1,11 +1,11 @@
 <?php
-
+/** Ce fichier gère les connexions au back-office du site.  */
 if(isset($_POST['connexion'])){
 
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    //On créer un nouvel objet de la class Personne vide pour pouvoir utliser la méthode getUserByEmail()
+    //On crée un nouvel objet de la class Personne vide pour pouvoir utliser la méthode getUserByEmail()
     $user = new Personne();
     $check = $user->getUserByEmail($email);
 

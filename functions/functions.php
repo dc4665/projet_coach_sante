@@ -1,6 +1,6 @@
 <?php
 
-//function pour chargher les classes
+//function pour charger les classes. Appelée par spl_autoload_register dans include.php
 function chargerClass($classe){
 
     require './class/'.$classe.'.php';

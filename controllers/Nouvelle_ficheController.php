@@ -1,5 +1,5 @@
 <?php
-
+/** Ce fichier gère la création d'une nouvelle fiche de suivi par les membres du site. */
 //On vérifie si la session de l'utilisateur existe bien
 if(isset($_SESSION['utilisateur'])){
 
@@ -14,10 +14,6 @@ if(isset($_SESSION['utilisateur'])){
         $actif = 0;
         $id_personne = ($_SESSION['utilisateur']->getId_personne());
         
-        //var_dump($_FILES);
-        //echo('<br/>');
-        //var_dump($_FILES['files']['name']['image_2']);
-
         //Nouvel Objet de la class Image pour pouvoir utiliser ses méthodes. 
         $img = new Image();
 

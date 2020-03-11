@@ -1,5 +1,5 @@
 <?php
-
+/** Fichier qui gère la page de recherche de tous les membres du site. */
 if(isset($_POST['recherche'])){
     $recherche = $_POST['recherche'];
 

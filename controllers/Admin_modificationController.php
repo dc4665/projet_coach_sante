@@ -1,5 +1,5 @@
 <?php
-
+/** Ce fichier gère la modification d'un membre. Utilisé seulement par l'administrateur.  */
 //Par mesure de sécurité on vérifie qu'on est bien sur une SESSION admin
 if($_SESSION['utilisateur']->getId_role() == 1){
 
@@ -37,7 +37,5 @@ if(isset($_POST['modification'])){
 
     
 }
-
-//Récupérations des informations de l'utilisateur sélectionné dans Admin_manager.tpl
 
 $smarty->display('template/admin_modification.tpl');
